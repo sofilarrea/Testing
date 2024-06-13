@@ -1,0 +1,149 @@
+/* Navbar Section */
+#navbar {
+    display: flex;
+    position: fixed;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+.home img{
+    width: 40px;
+    height: 100%; 
+    margin-right: 10px; 
+
+}   
+.navbar-links{
+    display: none;
+}
+.menu-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+.fa-solid  {
+    width: 15px;
+    height: 30px;
+    padding-top: 20px;
+    padding-right: 32px ;
+    height: 100%;
+    cursor: pointer;
+   }
+#navbar.fixed {
+    background-color: #1e1c1c; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+.home a,
+.navbar-links li a {
+text-decoration: none;
+color: white;
+font-family: "roboto", sans-serif;
+font-size: 0.9rem;
+font-weight: bold;
+text-transform: uppercase;
+opacity: 0.5;
+letter-spacing: 1px;
+}
+
+/* Open and close menu */
+#navbar:target .navbar-links {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+height: 100vh;
+width: 100%;
+padding: 20px;
+margin: 0;
+background-color: rgb(0, 0, 0);
+justify-content: center;
+}
+#navbar:target .open {
+display: none;
+}
+#navbar:target .close {
+display: block;
+}
+.close {
+display: none;
+}
+/* Hero section */
+.hero{
+    background-color: #010101;
+
+}
+.video video {
+    filter: grayscale(100%) brightness(20%);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+}
+.hero{
+    position: relative;
+}
+.hero .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.488); 
+    font-family: var(--font-family-jomlhari);
+    letter-spacing: 1px;
+    white-space: nowrap;
+    font-size: 1.5rem;
+}
+
+/* Section Áreas de práctica */
+.areas-de-practica{
+   background-color: var(--color-primary);
+   width: 100%;
+   min-height: 100vh;
+   flex-direction: column;
+   position: relative;
+   align-items: center;
+}
+.areas h2{
+   font-family: 'Roboto Condensed', sans-serif;
+   position: absolute;
+   top: 7%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: rgba(28, 27, 27, 0.422);
+   font-family: var(--font-family-jomlhari);
+   font-size: 4.5rem;
+
+}
+
+.encima h3 {
+   position: absolute;
+   top: 7%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: rgba(240, 232, 232, 0.648);
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 200;
+   font-size: 1.3rem;
+   white-space: nowrap;
+}
+.logos-up,
+.logos-down{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;    
+    height: 60vh;
+}
+.logo{
+    width: 100px;
+}

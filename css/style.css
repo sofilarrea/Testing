@@ -1,0 +1,29 @@
+@import url(/css/mobile.css);
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --color-primary: #090909;
+    --color-secundary: #212121;
+    --color-terciary: #111111;
+    --color-light: #f4f4f4;
+    --color-grey: #4D4D4D;
+    --font-family-roboto: "Roboto", sans-serif;
+    --font-family-jomlhari: "Jomolhari", serif;
+    --font-family-playfair: "Playfair Display", serif;
+    --light: #ffffff;
+    --dark: #000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html, a{
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Jomolhari'
+}
