@@ -124,15 +124,15 @@ display: none;
 }
 
 .encima h3 {
-   position: absolute;
-   top: 7%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   color: rgba(240, 232, 232, 0.648);
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 200;
-   font-size: 1.3rem;
-   white-space: nowrap;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(240, 232, 232, 0.648);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.3rem;
+    white-space: nowrap;
 }
 .logos-up,
 .logos-down{
