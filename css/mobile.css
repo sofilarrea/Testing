@@ -60,6 +60,7 @@ padding: 20px;
 margin: 0;
 background-color: rgb(0, 0, 0);
 justify-content: center;
+list-style: none;
 }
 #navbar:target .open {
 display: none;
@@ -105,7 +106,7 @@ display: none;
 /* Section Áreas de práctica */
 .areas-de-practica,
 .section-socios{
-   background-color: var(--color-primary);
+   background-color:black;
    width: 100%;
    min-height: 100vh;
    flex-direction: column;
@@ -214,7 +215,7 @@ display: none;
   
   /* cards*/
   .cards{
-    background-color: var(--color-primary);
+    background-color: black;
     background: var(--color-primary);
     bottom: 10px;
     position: relative;
@@ -224,7 +225,7 @@ display: none;
     height: 120px;
     display: flex;
     align-items: center;
-    background-color: var(--color-primary);
+    background-color: rgba(0, 0, 0, 0.87);
   }
   
   .card-product img {
@@ -419,7 +420,7 @@ display: none;
    .section-cobranzas,
    .section-la-firma{
     padding: 25px;
-    background-color: #090909;
+    background-color: black;
    }
    .section-sociedades p,
    .section-cobranzas p {
