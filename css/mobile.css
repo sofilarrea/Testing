@@ -443,4 +443,112 @@ display: none;
       align-items: center;
       filter: grayscale(100%);
    }
-   
+  
+/* La firma */
+.hero-la-firma{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  background-attachment: fixed;
+  background-image: url('https://images.unsplash.com/photo-1560174038-da43ac74f01b?q=80&w=1457&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  width: 100%;
+  height: 100vh;
+  filter: grayscale(100%);
+}
+
+.section-la-firma{
+  padding: 50px;
+  background-color: black;
+}
+.imagen-section-la-firma img{
+  display: none;
+}
+.section-la-firma p{
+  padding: 2px;
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0.8;
+
+}
+/* Guilllermo Vizcaino */
+
+/* Guillermo Vizcaino */
+
+.hero-guillermo-vizcaino {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/guillermo-vizcaino.jpg');
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  filter: grayscale(100%);
+}
+.card-category {
+/*   background-image:  linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.653)), url('/assets/images/Leonardo_Diffusion_XL_generate_a_black_background_with_litle_l_0.jpg') ;
+ */  background-image: center;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: #010101;
+  bottom: -20px;
+}
+.introduccion{
+  padding: 40px;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 21px;
+}
+.areas-socios-guillermo{
+  font-family: 'Roboto Condensed', sans-serif;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(28, 27, 27, 0.667);
+  font-family: var(--font-family-jomlhari);
+  font-size: 4.0rem;
+}
+.apellido {
+  display: block;
+  text-align: center;
+}
+
+.encima-socios-guillermo{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(240, 232, 232, 0.648);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+
+.educacion,
+.distinciones,
+.academia{
+  padding: 40px;
+  background-color: #000000;
+  color:  rgba(255, 255, 255, 0.5);
+}
+.educacion hr,
+.distinciones hr,
+.academia hr {
+  width: 40%;
+  position: relative;
+  right: 0%;
+}
+.educacion h4{
+  margin-bottom: 3px;
+
+}
