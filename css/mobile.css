@@ -508,13 +508,13 @@ display: none;
 }
 .areas-socios-guillermo{
   font-family: 'Roboto Condensed', sans-serif;
-  position: absolute;
+  position: relative;
   top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   color: rgba(28, 27, 27, 0.667);
   font-family: var(--font-family-jomlhari);
   font-size: 4.0rem;
+  overflow-x: hidden;
 }
 .apellido {
   display: block;
