@@ -90,18 +90,16 @@ display: none;
 .hero{
     position: relative;
 }
-.hero .hero-title {
+.hero-title h1{
+  display: none;
+}
+.hero .hero-title img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     z-index: 10;
-    color: rgba(255, 255, 255, 0.488); 
-    font-family: var(--font-family-jomlhari);
-    letter-spacing: 1px;
-    white-space: nowrap;
-    font-size: 1.1rem;
+    width: 370px;
 }
 
 /* Section Áreas de práctica */
