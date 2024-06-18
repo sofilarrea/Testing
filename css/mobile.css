@@ -85,7 +85,7 @@ display: none;
     background-attachment: fixed;
     overflow: hidden;
     position: relative;
-    /* height: 100vh; */
+    height: 100vh; 
 }
 .hero{
     position: relative;
@@ -170,8 +170,8 @@ display: none;
 
 }
 .logo-img{
-    width: 55px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
