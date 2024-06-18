@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 10;
     transition: background-color 0.3s ease;
 }
 .home img{
@@ -89,6 +89,7 @@ display: none;
 }
 .hero{
     position: relative;
+    /* bottom: -3px; */
 }
 .hero-title h1{
   display: none;
@@ -98,16 +99,25 @@ display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 9;
     width: 370px;
 }
 
 /* Section Áreas de práctica */
-.areas-de-practica,
+.areas-de-practica{
+  height: 68vh;
+  background-color:black;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  width: 100%;
+
+}
+
 .section-socios{
    background-color:black;
    width: 100%;
-   min-height: 100vh;
+   height: 100vh;
    flex-direction: column;
    position: relative;
    align-items: center;
@@ -140,11 +150,16 @@ display: none;
 .logos-down{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     justify-content: space-evenly;
-    align-items: center;
     width: 100%;    
-    height: 60vh;
+}
+.logos-up{
+  position: relative;
+  top: 115px;
+}
+.logos-down{
+  position: relative;
+  top: 198px;
 }
 .logo{
     width: 100px;
@@ -471,7 +486,7 @@ display: none;
   opacity: 0.8;
 
 }
-/* Guilllermo Vizcaino */
+
 
 /* Guillermo Vizcaino */
 
@@ -510,7 +525,6 @@ display: none;
   font-family: 'Roboto Condensed', sans-serif;
   position: relative;
   top: 15%;
-
   color: rgba(28, 27, 27, 0.667);
   font-family: var(--font-family-jomlhari);
   font-size: 4.0rem;
