@@ -750,10 +750,11 @@ display: none;
 .educacion hr,
 .distinciones hr,
 .academia hr {
-  width: 40%;
+  width: 59%;
   position: relative;
   right: 0%;
 }
+
 .educacion h4,
 .academia h4{
   margin-bottom: 3px;
