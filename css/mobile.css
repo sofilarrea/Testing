@@ -754,7 +754,13 @@ display: none;
   position: relative;
   right: 0%;
 }
-.educacion h4{
+.educacion h4,
+.academia h4{
   margin-bottom: 3px;
+  letter-spacing: 1.5px;
+}
 
+.secundaria{
+  letter-spacing: 2px;
+  text-decoration: underline;
 }
