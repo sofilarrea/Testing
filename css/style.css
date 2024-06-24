@@ -26,5 +26,6 @@
 body, html, a{
     list-style: none;
     text-decoration: none;
-    font-family: 'Montserrat'
+    font-family: 'Montserrat';
+    background-color:#0d0d0d;
 }

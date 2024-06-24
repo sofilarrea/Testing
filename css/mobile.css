@@ -73,7 +73,7 @@ display: none;
 }
 /* Hero section */
 .hero{
-    background-color: #010101;
+    background-color: #0d0d0d;
 
 }
 .video video {
@@ -106,7 +106,7 @@ display: none;
 /* Section Áreas de práctica */
 .areas-de-practica{
   height: 68vh;
-  background-color:black;
+  background-color:#0d0d0d;
   flex-direction: column;
   position: relative;
   align-items: center;
@@ -115,7 +115,7 @@ display: none;
 }
 
 .section-socios{
-   background-color:black;
+   background-color:#0d0d0d;
    width: 100%;
    min-height: 100vh;
    flex-direction: column;
@@ -129,7 +129,7 @@ display: none;
    top: 7%;
    left: 50%;
    transform: translate(-50%, -50%);
-   color: rgba(28, 27, 27, 0.422);
+   color: rgba(55, 55, 55, 0.422);
    font-family: var(--font-family-jomlhari);
    font-size: 4.5rem;
 
@@ -239,7 +239,7 @@ display: none;
     height: 120px;
     display: flex;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.87);
+    background-color: #0d0d0d;
   }
   
   .card-product img {
@@ -287,14 +287,14 @@ display: none;
     top: 13%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(28, 27, 27, 0.422);
+    color: rgba(55, 55, 55, 0.422);
     font-family: var(--font-family-jomlhari);
     font-size: 4.5rem;
  
  }
  
   .section-contacto{
-    background-color:black;
+    background-color:#0d0d0d;
     width: 100%;
     flex-direction: column;
     position: relative;
@@ -604,6 +604,7 @@ display: none;
       position: relative;
       align-items: center;
       filter: grayscale(100%);
+      
    
    }
    .title-sociedades h1,
