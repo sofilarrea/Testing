@@ -5,11 +5,12 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    z-index: 10;
+    z-index: 10000;
     transition: background-color 0.3s ease;
     height: 68px;
     background-color: #0d0d0d;
 }
+
 .home img{
     width: 72px;
     height: 100%; 
@@ -28,18 +29,17 @@
 .fa-solid  {
     width: 15px;
     height: 30px;
-    padding-top: 20px;
-    padding-right: 32px ;
+    padding-top: 10px;
+    padding-right: 50px ;
     height: 100%;
     cursor: pointer;
+    font-size: 30px;
    }
-.fa-solid:hover{
-    color: #f2eeee;
-}
+
 .home a,
 .navbar-links li a {
 text-decoration: none;
-color: white;
+color: rgb(185, 180, 180);
 font-family: "roboto", sans-serif;
 font-size: 0.9rem;
 font-weight: bold;
@@ -62,9 +62,11 @@ margin: 0;
 background-color: #0d0d0d;
 justify-content: center;
 list-style: none;
+position: relative;
+top: -10px;
 }
 .navbar-links li a:hover{
-    color: #d7d0d0;
+    color: #ffffff;
 
 }
 #navbar:target .open {
@@ -123,7 +125,7 @@ display: none;
 .section-socios{
    background-color:#0d0d0d;
    width: 100%;
-   min-height: 100vh;
+   min-height: 110vh;
    flex-direction: column;
    position: relative;
    align-items: center;
@@ -132,7 +134,7 @@ display: none;
 .areas-socios h2{
    font-family: 'Roboto Condensed', sans-serif;
    position: absolute;
-   top: 7%;
+   top: 23%;
    left: 50%;
    transform: translate(-50%, -50%);
    color: rgba(55, 55, 55, 0.422);
@@ -143,7 +145,7 @@ display: none;
 
 .encima h3 {
     position: absolute;
-    top: 7%;
+    top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(240, 232, 232, 0.648);
@@ -161,11 +163,11 @@ display: none;
 }
 .logos-up{
   position: relative;
-  top: 115px;
+  top: 218px;
 }
 .logos-down{
   position: relative;
-  top: 198px;
+  top: 304px;
 }
 .logo{
     width: 100px;
@@ -229,15 +231,17 @@ display: none;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       padding: 5px;
+      top: 172px;
+      position: relative;
   }
   
   /* cards*/
   .cards{
     background-color: black;
     background: var(--color-primary);
-    bottom: 10px;
+    bottom: -234px;
     position: relative;
   }
   .card-product {
@@ -286,11 +290,13 @@ display: none;
     justify-content: center;
     align-items: center;
     display: flex;
+    height: 100vh;
   }
+
   .areas-contacto h2{
     font-family: 'Roboto Condensed', sans-serif;
     position: absolute;
-    top: 13%;
+    top: 24%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(55, 55, 55, 0.422);
@@ -308,7 +314,7 @@ display: none;
  }
   .encima-contacto h3{ 
       position: absolute;
-      top: 13%;
+      top: 24%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: rgba(240, 232, 232, 0.648);
@@ -479,7 +485,7 @@ display: none;
    flex-flow: row wrap;
    padding: 80px 30px 20px 30px;
    color: #f2eeee;
-   background-color: #010101;
+   background-color: #0b0b0b;
  }
  .footer-areas-de-practica{
  background-color: #010101;
@@ -658,7 +664,8 @@ display: none;
       filter: grayscale(100%);
    }
   
-/* La firma */
+/* L A  F I R M A */
+
 .hero-la-firma{
   background-size: cover;
   background-position: center;
@@ -674,7 +681,7 @@ display: none;
 
 .section-la-firma{
   padding: 50px;
-  background-color: black;
+  background-color: #0d0d0d;
 }
 .imagen-section-la-firma img{
   display: none;
@@ -712,12 +719,12 @@ display: none;
   align-items: center;
   color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: #010101;
+  background-color: #0d0d0d;
   bottom: -20px;
 }
 .introduccion{
   padding: 40px;
-  background-color: #000000;
+  background-color: #0d0d0d;
   color: rgba(255, 255, 255, 0.5);
   line-height: 21px;
 }
@@ -737,7 +744,7 @@ display: none;
 
 .encima-socios-guillermo{
   position: absolute;
-  top: 16%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(240, 232, 232, 0.648);
@@ -751,7 +758,7 @@ display: none;
 .distinciones,
 .academia{
   padding: 40px;
-  background-color: #000000;
+  background-color: #0d0d0d;
   color:  rgba(255, 255, 255, 0.5);
 }
 .educacion hr,
