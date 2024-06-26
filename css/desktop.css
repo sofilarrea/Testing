@@ -1,0 +1,9 @@
+.menu-icon{
+    display: none;
+}
+.navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+}

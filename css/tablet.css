@@ -1,9 +1,26 @@
-.menu-icon{
-    display: none;
+
+.hero .hero-title img{
+    width: 70%;
 }
-.navbar-links{
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    align-items: center;
+.logos-up a p, .logos-down a p {
+    font-size: 1rem;
 }
+.logo-img {
+    width: 59px;
+    height: 59px;
+}
+ .cards{
+    flex-direction: column;
+ }
+
+ .areas h2, .areas-socios h2,
+ .areas-contacto h2{
+    font-size: 6rem;
+ }
+ .encima h3,
+ .encima-contacto h3{
+    font-size: 2.1rem;
+ }
+ .content__firma p{
+    font-size: 1.5rem;
+ }
