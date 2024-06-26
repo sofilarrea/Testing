@@ -168,14 +168,14 @@ display: none;
 
 }
 .logos-up{
-  position: relative;
-  top: 171px;
+  position: absolute;
+ top: 35%;
   flex-shrink: 1;
   flex-grow: 1;
 }
 .logos-down{
-  position: relative;
-  top: 220px;
+  position: absolute;
+  bottom: 20%;
 }
 .logo{
     width: 100px;
