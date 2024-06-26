@@ -114,7 +114,7 @@ display: none;
 
 /* Section Áreas de práctica */
 .areas-de-practica{
-  min-height: 100vh;
+  min-height: 101vh;
   background-color:#0d0d0d;
   flex-direction: column;
   position: relative;
@@ -135,7 +135,7 @@ display: none;
 .areas-socios h2{
    font-family: 'Roboto Condensed', sans-serif;
    position: absolute;
-   top: 23%;
+   top: 16%;
    left: 50%;
    transform: translate(-50%, -50%);
    color: rgba(55, 55, 55, 0.422);
@@ -146,7 +146,7 @@ display: none;
 
 .encima h3 {
     position: absolute;
-    top: 23%;
+    top: 16%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(240, 232, 232, 0.648);
@@ -155,21 +155,27 @@ display: none;
     font-size: 1.3rem;
     white-space: nowrap;
 }
+.logos{
+  display: flex;
+  flex-direction: column;
+}
 .logos-up,
 .logos-down{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%; 
-    padding: 10px;   
+
 }
 .logos-up{
   position: relative;
-  top: 218px;
+  top: 171px;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
 .logos-down{
   position: relative;
-  top: 304px;
+  top: 220px;
 }
 .logo{
     width: 100px;
