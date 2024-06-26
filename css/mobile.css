@@ -114,7 +114,7 @@ display: none;
 
 /* Section Áreas de práctica */
 .areas-de-practica{
-  min-height: 101vh;
+  min-height: 100vh;
   background-color:#0d0d0d;
   flex-direction: column;
   position: relative;
@@ -126,7 +126,7 @@ display: none;
 .section-socios{
    background-color:#0d0d0d;
    width: 100%;
-   min-height: 180vh;
+   min-height: 140vh;
    flex-direction: column;
    position: relative;
    align-items: center;
