@@ -729,7 +729,7 @@ display: none;
   
 /* L A  F I R M A */
 
-.hero-la-firma{
+.hero-la-firma {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -741,7 +741,6 @@ display: none;
   height: 100vh;
   filter: grayscale(100%);
 }
-
 .section-la-firma{
   padding: 50px;
   background-color: #0d0d0d;
