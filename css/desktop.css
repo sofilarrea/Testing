@@ -3,7 +3,8 @@
 }
 .navbar-links{
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    justify-content: space-evenly;
+    width: 56%;
     align-items: center;
+    margin-right: 34px;
 }

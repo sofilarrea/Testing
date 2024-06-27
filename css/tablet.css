@@ -2,6 +2,9 @@
 .hero .hero-title img{
     width: 70%;
 }
+.menu-icon{
+    margin-right: 15px;
+}
 .logos-up a p, .logos-down a p {
     font-size: 1rem;
 }
