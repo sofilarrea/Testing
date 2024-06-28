@@ -27,3 +27,6 @@
  .content__firma p{
     font-size: 1.5rem;
  }
+ .educacion hr, .distinciones hr, .academia hr {
+    width: 37%;
+ }
