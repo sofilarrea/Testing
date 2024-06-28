@@ -106,7 +106,7 @@ display: none;
   overflow: hidden;
 }
 .video video {
-  filter: grayscale(100%) brightness(20%);
+  filter: grayscale(100%) brightness(41%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -229,7 +229,7 @@ display: none;
 }
 /* Parallax */
 .parallax {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.733)), url('/assets/images/1cffbb24ee229cc1e847b7f007c0b674.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.544), rgba(0, 0, 0, 0.733)), url('/assets/images/1cffbb24ee229cc1e847b7f007c0b674.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -808,7 +808,7 @@ display: none;
 
 .encima-socios-guillermo{
   position: absolute;
-  top: 15%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(240, 232, 232, 0.648);
