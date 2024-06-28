@@ -30,3 +30,7 @@
  .educacion hr, .distinciones hr, .academia hr {
     width: 37%;
  }
+ .introdcuccion{
+    line-height: 30px;
+    font-size: 1.3rem;
+ }
