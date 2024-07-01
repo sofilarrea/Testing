@@ -30,3 +30,20 @@ body, html, a, ul{
     font-family: "Roboto Slab", serif;
    
 }
+body.light-mode{
+    background-color: var(--light);
+    color: var(--dark);
+}
+body.dark-mode{
+    background: color #0d0d0d;;
+    color: var(--light);
+}
+/* Agrega esto en tu CSS */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    
+}

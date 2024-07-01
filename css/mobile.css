@@ -159,7 +159,7 @@ display: none;
    top: 16%;
    left: 50%;
    transform: translate(-50%, -50%);
-   color: rgba(55, 55, 55, 0.422);
+   color: rgba(55, 55, 55, 0.648);
    font-family: var(--font-family-jomlhari);
    font-size: 4.5rem;
 
@@ -358,7 +358,7 @@ display: none;
     top: 24%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(55, 55, 55, 0.422);
+    color: rgba(55, 55, 55, 0.648);
     font-family: var(--font-family-jomlhari);
     font-size: 3.8rem;
  
@@ -796,7 +796,7 @@ display: none;
   font-family: 'Roboto Condensed', sans-serif;
   position: relative;
   top: 15%;
-  color: rgba(28, 27, 27, 0.667);
+  color: rgba(55, 55, 55, 0.648);
   font-family: var(--font-family-jomlhari);
   font-size: 3.3rem;
   overflow-x: hidden;
@@ -808,7 +808,7 @@ display: none;
 
 .encima-socios-guillermo{
   position: absolute;
-  top: 16%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(240, 232, 232, 0.648);
@@ -828,7 +828,7 @@ display: none;
 .educacion hr,
 .distinciones hr,
 .academia hr {
-  width: 59%;
+  width: 72%;
   position: relative;
   right: 0%;
 }
