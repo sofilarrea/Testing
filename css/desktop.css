@@ -11,3 +11,9 @@
 .educacion hr, .distinciones hr, .academia hr {
     width: 20%;
 }
+.hero .hero-title img {
+    width: 40%;
+}
+.content__firma{
+    padding: 50px;
+}
