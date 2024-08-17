@@ -29,3 +29,26 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+const formulario = document.querySelector('#form')
+formulario.addEventListener('submit', handleSubmit);
+function handleSubmit(event){
+  console.log("hello")
+  event.preventDefault()
+  const form = new FormData(this)
+  console.log(form.get('name'))
+}
+// document.addEventListener('DOMContentLoaded', () => {
+//   const formulario = document.querySelector('#form');
+//   formulario.addEventListener('submit', handleSubmit);
+// });
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   console.log("Form submission prevented");
+
+//   const form = new FormData(event.target);
+//   console.log("Name: ", form.get('name'));
+//   console.log("Email: ", form.get('email'));
+//   console.log("Message: ", form.get('message'));
+// }

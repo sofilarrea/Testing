@@ -17,7 +17,7 @@
     --font-family-playfair: "Playfair Display", serif;
     --light: #ffffff;
     --dark: #000;
-   
+
 }
 *{
     margin: 0;
@@ -28,14 +28,14 @@ body, html, a, ul{
     list-style: none;
     text-decoration: none;
     font-family: "Roboto Slab", serif;
-   
+
 }
 body.light-mode{
     background-color: var(--light);
     color: var(--dark);
 }
 body.dark-mode{
-    background: color #0d0d0d;;
+    background: color #1a1a1a;;
     color: var(--light);
 }
 /* Agrega esto en tu CSS */
@@ -45,5 +45,5 @@ body.dark-mode{
         color: white;
     }
 
-    
+
 }
