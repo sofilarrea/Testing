@@ -83,10 +83,7 @@ display: none;
 }
 
 /* Hero section */
-.hero{
-    background-color: #0d0d0d;
 
-}
 .video {
   position: relative;
   width: 100%;
@@ -94,7 +91,7 @@ display: none;
   overflow: hidden;
 }
 .video video {
-  filter: grayscale(20%) brightness(80px);
+  filter: grayscale(70%) brightness(80%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -104,11 +101,12 @@ display: none;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
 .hero{
     position: relative;
     /* bottom: -3px; */
 }
-.hero .hero-title h1 {
+.hero .hero-title img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -197,7 +195,7 @@ span{
     top: 16%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.648);
+    color: rgba(255, 255, 255, 0.926);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
@@ -245,7 +243,7 @@ span{
 }
 .logos-up a p,
 .logos-down a p {
-  color: rgb(255 255 255 / 78%);
+  color: rgb(255, 255, 255);
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.8rem;
     font-weight: 300;
@@ -257,6 +255,7 @@ span{
 }
 .logo:hover{
   transform: scale(1.1);
+  cursor: pointer;
 
 }
 /* Parallax */
@@ -318,7 +317,7 @@ span{
       top: 24%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: rgba(240, 232, 232, 0.648);
+      color: rgb(240, 232, 232);
       font-family: 'Montserrat', sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
@@ -705,8 +704,8 @@ span{
 /* Guillermo Vizcaino */
 
 .hero-guillermo-vizcaino {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/guillermo-vizcaino.jpg');
-  width: 100%;
+/*   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/guillermo-vizcaino.jpg');
+ */  width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -716,30 +715,29 @@ span{
   filter: grayscale(100%);
 }
 .card-category {
-/*   background-image:  linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.653)), url('/assets/images/Leonardo_Diffusion_XL_generate_a_black_background_with_litle_l_0.jpg') ;
- */  background-image: center;
-  background-size: cover;
-  background-position: center;
+
+background-color: #1D1D1B;
+color: rgb(255, 255, 255);
   height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(0, 0, 0);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: #0d0d0d;
   bottom: -20px;
 }
 .introduccion{
   padding: 40px;
-  background-color: #0d0d0d;
-  color: rgba(255, 255, 255, 0.5);
+  background-color: #1D1D1B;
+  color: rgb(255, 255, 255);
   line-height: 21px;
 }
 .areas-socios-guillermo{
+
   font-family: 'Roboto Condensed', sans-serif;
   position: relative;
   top: 15%;
-  color: rgba(55, 55, 55, 0.648);
+  color: rgba(57, 56, 56, 0.648);
   font-family: var(--font-family-jomlhari);
   font-size: 3.3rem;
   overflow-x: hidden;
@@ -751,10 +749,10 @@ span{
 
 .encima-socios-guillermo{
   position: absolute;
-  top: 17%;
+  top: 19%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(240, 232, 232, 0.648);
+  color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   font-size: 1.3rem;
@@ -764,9 +762,9 @@ span{
 .educacion,
 .distinciones,
 .academia{
+  background-color: #1D1D1B;
   padding: 40px;
-  background-color: #0d0d0d;
-  color:  rgba(255, 255, 255, 0.5);
+  color: /*  rgba(255, 255, 255, 0.5) */ rgb(255, 255, 255);
 }
 .educacion hr,
 .distinciones hr,
@@ -778,7 +776,7 @@ span{
 .educacion h4,
 .academia h4{
   margin-bottom: 3px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 }
 
 .secundaria{
@@ -915,7 +913,7 @@ span{
 }
 .ag-courses-item_date {
   font-weight: bold;
-  color: #f9b234;
+  color: #f9b13495;
 
   -webkit-transition: color .5s ease;
   -o-transition: color .5s ease;
@@ -992,3 +990,29 @@ span{
 .socios-content{
   margin: 50px auto;
 }
+
+/*
+@media  screen and (max-width: 320px){
+ .areas-contacto h2 {
+  font-size: 3.1rem;
+ }
+ #message{
+  width: 230px;
+ }
+ #name{
+  width: 230px;
+ }
+  #email{
+    width: 230px;
+  }
+  #submit{
+    width: 230px;
+  }
+  #form{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+ */
