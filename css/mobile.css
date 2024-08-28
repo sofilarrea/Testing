@@ -131,7 +131,10 @@ display: none;
     position: relative;
     width: 100%;
     min-height: 60vh;
-    margin: 50px auto;
+
+}
+.container-la-firma{
+  margin: 50px auto;
 }
 .parrafo-la-firma h5{
   color: white;
@@ -159,16 +162,15 @@ span{
 /* Section Áreas de práctica */
 .areas-de-practica{
   min-height: 100vh;
-  background-color:#1a1a1a;
+  background-color:#171715;
   flex-direction: column;
   position: relative;
   align-items: center;
   width: 100%;
-
 }
 
 .section-socios{
-   background-color:#0d0d0d;
+   background-color: var(--color-primary);
    width: 100%;
    min-height: 100vh;
    flex-direction: column;
@@ -183,7 +185,7 @@ span{
    top: 16%;
    left: 50%;
    transform: translate(-50%, -50%);
-   color: rgba(92, 91, 91, 0.627);
+   color: rgba(63, 63, 63, 0.549);
    font-family: var(--font-family-jomlhari);
    font-size: 4.5rem;
     white-space: nowrap;
@@ -229,6 +231,7 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 .logo-img{
@@ -253,7 +256,7 @@ span{
   margin-top: 10px;
 }
 .logo:hover{
-  box-shadow: 0 0 2px 0.1px #f2f7f7;
+  transform: scale(1.1);
 
 }
 /* Parallax */
