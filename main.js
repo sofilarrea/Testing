@@ -52,3 +52,9 @@ function handleSubmit(event){
 //   console.log("Email: ", form.get('email'));
 //   console.log("Message: ", form.get('message'));
 // }
+document.querySelectorAll('.ag-courses-item_link').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+    // Aquí puedes agregar el código para la acción que deseas realizar
+  });
+});
