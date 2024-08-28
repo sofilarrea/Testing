@@ -47,7 +47,7 @@ font-family: "roboto", sans-serif;
 font-size: 0.9rem;
 font-weight: bold;
 text-transform: uppercase;
-opacity: 0.5;
+/* opacity: 0.5; */
 letter-spacing: 1px;
 }
 
@@ -87,18 +87,6 @@ display: none;
     background-color: #0d0d0d;
 
 }
-/* .video video {
-    filter: grayscale(100%) brightness(20%);
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-} */
-
 .video {
   position: relative;
   width: 100%;
@@ -120,16 +108,52 @@ display: none;
     position: relative;
     /* bottom: -3px; */
 }
-.hero-title h1{
-  display: none;
-}
-.hero .hero-title img {
+.hero .hero-title h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9;
     width: 370px;
+    text-align: center;
+    color: rgb(11, 11, 11);
+    font-size: 2rem;
+    font-family: "Moderustic", sans-serif;
+    white-space: nowrap;
+  }
+/* Section La Firma */
+.la-firma{
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    margin: 50px auto;
+}
+.parrafo-la-firma h5{
+  color: white;
+  font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: .5px;
+    margin-bottom: 15px;
+  font-size: 25px;
+  padding: 0 10px;
+}
+.segundo-parrafo{
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Rubik', sans-serif;
+  color: #ddd;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0 10px;
+}
+span{
+  font-style: italic;
+  font-family: "Merriweather", serif;
 }
 
 /* Section Áreas de práctica */
@@ -159,10 +183,11 @@ display: none;
    top: 16%;
    left: 50%;
    transform: translate(-50%, -50%);
-   color: rgba(55, 55, 55, 0.648);
+   color: rgba(92, 91, 91, 0.627);
    font-family: var(--font-family-jomlhari);
    font-size: 4.5rem;
-
+    white-space: nowrap;
+    letter-spacing: 1px;
 }
 
 .encima h3 {
@@ -170,7 +195,7 @@ display: none;
     top: 16%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(240, 232, 232, 0.648);
+    color: rgba(255, 255, 255, 0.648);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
@@ -318,7 +343,7 @@ display: none;
   .card-product p {
     font-size: 12px;
     line-height: 1.4;
-    opacity: .7;
+  /*   opacity: .7; */
     margin-bottom: 0;
     margin-top: 8px;
     color: rgba(238, 236, 236, 0.648);
@@ -335,7 +360,7 @@ display: none;
   .card-product p {
     font-size: 12px;
     line-height: 1.4;
-    opacity: .7;
+  /*   opacity: .7; */
     margin-bottom: 0;
     margin-top: 8px;
     color: rgba(238, 236, 236, 0.648);
@@ -703,7 +728,7 @@ display: none;
       font-family: var(--font-family-jomlhari);
       font-size: 1.9rem;
       white-space: nowrap;
-      opacity: 0.8;
+  /*     opacity: 0.8; */
       line-height: 40px;
       letter-spacing: 3px;
    }
@@ -716,7 +741,7 @@ display: none;
    .section-sociedades p,
    .section-cobranzas p {
     color: rgb(255, 255, 255);
-    opacity: 0.8;
+   /*  opacity: 0.8; */
     font-size: 1rem;
     padding: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -762,7 +787,7 @@ display: none;
   padding: 2px;
   color: white;
   font-size: 1.5rem;
-  opacity: 0.8;
+/*   opacity: 0.8; */
 
 }
 
