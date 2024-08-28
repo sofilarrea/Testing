@@ -17,3 +17,11 @@
 .content__firma{
     padding: 50px;
 }
+
+.ag-courses_item {
+  -ms-flex-preferred-size: calc(50% - 30px);
+  flex-basis: calc(50% - 30px);
+}
+.ag-courses-item_title {
+  font-size: 24px;
+}

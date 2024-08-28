@@ -270,7 +270,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: grayscale(100%) brightness(70%);
+    filter: grayscale(30%) brightness(70%);
 }
 .content__firma p{
   font-family: 1.2rem;
@@ -283,100 +283,6 @@ span{
  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
-.socios-content {
-/*     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; */
-
-      width: 100%;
-      padding: 20px;
-
-  }
-  .socios-p{
-    color: rgba(238, 236, 236, 0.648);
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 20px;
-    padding: 20px;
-    top: 172px;
-    position: relative;
-
-  }
-
-  /* cards*/
-  .cards{
-    background-color: #0d0d0d;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-    padding-top: 161px;
-  }
-  .card-product:hover{
-    box-shadow: 0 0 2px 0.1px #f2f7f7;
-
-  }
-  .card-product {
-    overflow: hidden;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    background-color: #0d0d0d;
-  }
-
-  .card-product img {
-    height: 70%;
-    width: 90px;
-    object-fit: cover;
-    filter: grayscale(20%) brightness(0.5);
-
-  }
-
-  .card-product h4 {
-    letter-spacing: 1px;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-    color: rgba(238, 236, 236, 0.648);
-  }
-.card-product h4:hover{
-  color: white;
-}
-  .card-product p {
-    font-size: 12px;
-    line-height: 1.4;
-  /*   opacity: .7; */
-    margin-bottom: 0;
-    margin-top: 8px;
-    color: rgba(238, 236, 236, 0.648);
-  }
-  .card-product a{
-    text-decoration: none;
-    color: white;
-
-  }
-  .card-product .card-product-infos {
-    padding: 16px;
-  }
-
-  .card-product p {
-    font-size: 12px;
-    line-height: 1.4;
-  /*   opacity: .7; */
-    margin-bottom: 0;
-    margin-top: 8px;
-    color: rgba(238, 236, 236, 0.648);
-  }
-  .card-product a{
-    text-decoration: none;
-    color: white;
-
-  }
-  .card-product .card-product-infos {
-    padding: 16px;
-  }
 
 
 
@@ -946,12 +852,9 @@ span{
 }
 
 
-body {
-  background-color: #000;
-}
+
 .ag-courses_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
   -webkit-box-align: start;
   -ms-flex-align: start;
