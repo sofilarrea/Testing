@@ -54,7 +54,7 @@ function handleSubmit(event){
 // }
 document.querySelectorAll('.ag-courses-item_link').forEach(link => {
   link.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+   /*  event.preventDefault(); */ // Evita el comportamiento predeterminado del enlace
     // Aquí puedes agregar el código para la acción que deseas realizar
   });
 });
