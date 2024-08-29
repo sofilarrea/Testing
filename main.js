@@ -52,9 +52,39 @@ function handleSubmit(event){
 //   console.log("Email: ", form.get('email'));
 //   console.log("Message: ", form.get('message'));
 // }
-document.querySelectorAll('.ag-courses-item_link').forEach(link => {
-  link.addEventListener('click', function(event) {
-   /*  event.preventDefault(); */ // Evita el comportamiento predeterminado del enlace
-    // Aquí puedes agregar el código para la acción que deseas realizar
+/* Accordeon */
+document.addEventListener('DOMContentLoaded', () => {
+  const headers = document.querySelectorAll('.accordion-header-ideario');
+
+  headers.forEach(header => {
+      header.addEventListener('click', function () {
+          const section = this.parentElement;
+          const content = section.querySelector('.accordion-content-ideario');
+
+          // Verificar si la sección ya está activa
+          const isActive = section.classList.contains('active');
+
+          // Colapsar todas las secciones
+          document.querySelectorAll('.accordion-section-ideario').forEach(sec => {
+              const secContent = sec.querySelector('.accordion-content-ideario');
+              if (secContent) {
+                  secContent.style.maxHeight = '0'; // Colapsar todas las secciones
+              }
+              sec.classList.remove('active');
+          });
+
+          // Si la sección no estaba activa, expándela
+          if (!isActive) {
+              section.classList.add('active');
+              content.style.maxHeight = content.scrollHeight + 'px'; // Expande el contenido
+          }
+      });
+  });
+
+  // Colapsar todas las secciones inicialmente
+  document.querySelectorAll('.accordion-content-ideario').forEach(content => {
+      content.style.maxHeight = '0'; // Colapsa todas las secciones al cargar la página
+      content.style.overflow = 'hidden'; // Evitar que el contenido desborde
+      content.style.transition = 'max-height 0.5s ease-in-out'; // Suave transición de colapsado/expandido
   });
 });
