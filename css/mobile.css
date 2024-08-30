@@ -1017,89 +1017,71 @@ color: rgb(255, 255, 255);
 }
  */
     /* i n d e x   g l o b a l */
-    .ideario {
-      position: relative;
-      background-image: radial-gradient(rgba(0, 0, 0, 0.87), rgba(10, 2, 9, 0.636)), url('/assets/images/ajedrez.avif');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    .areas-de-practica-dos {
       min-height: 100vh;
+      background-color: #171715;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .container-ideario {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .card {
+      background-color: #222; /* Fondo oscuro para la card */
+      border-radius: 8px; /* Bordes redondeados */
+      padding: 20px;
+      margin-top: 120px;
+      width: 90%; /* Ajusta el ancho */
+      max-width: 600px; /* Ancho máximo */
+      position: relative;
+    }
+
+    .title-card h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+      z-index: 3;
+      position: relative;
+    }
+
+    .parrafo {
+      color: white;
+      margin: 10px auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-  }
-.areas-ideario h2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  position: absolute;
-  top: 22%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(63, 63, 63, 0.549);
-  font-family: var(--font-family-jomlhari);
-  font-size: 4.5rem;
-   white-space: nowrap;
-   letter-spacing: 1px;
-}
-.encima-ideario h3 {
-  position: absolute;
-  top: 22%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.926);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  white-space: nowrap;
-}
-.ideario {
-  position: relative;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.87), rgba(10, 2, 9, 0.636)), url('/assets/images/niñas.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    }
 
-  padding: 20px;
-}
+    .oculto {
+      display: none;
+    }
 
-.accordion-ideario {
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-}
+    .mostrar {
+      display: block;
+    }
 
-.accordion-section-ideario {
-  border-radius: 5px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
+    .ver-mas-enlace {
+      color: #007bff; /* Color del texto del enlace */
+      text-decoration: none; /* Quita el subrayado */
+      font-weight: bold; /* Fuente en negrita */
+      cursor: pointer; /* Cursor de mano */
+      transition: color 0.3s ease; /* Transición suave para el color */
+      margin-top: 45px;
+    }
 
-.accordion-header-ideario {
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  font-weight: 100;
-  gap: 20px;
-}
 
-.accordion-header-ideario img {
-  width: 20px;
-  margin-right: 10px;
-}
-
-.accordion-content-ideario {
-  height: 0;
-  padding: 0 15px;
-  background-color: white;
-  font-size: 1.3rem;
-  overflow: hidden;
-  transition: height 0.6s ease;
-}
-
-.accordion-section-ideario.active .accordion-content-ideario {
-  height: auto;
-  padding: 15px;
-}
+    .ver-mas-enlace:hover {
+      color: #0056b3; /* Color más oscuro al pasar el cursor */
+    }
