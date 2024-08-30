@@ -260,7 +260,7 @@ span{
 }
 /* Parallax */
 .parallax {
-    background-image: url('/assets/images/pixelcut-export (1).jpeg');
+    background-image: url('/assets/images/hero-bg.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -1018,7 +1018,9 @@ color: rgb(255, 255, 255);
  */
     /* i n d e x   g l o b a l */
     .areas-de-practica-dos {
-      background-image: url('/assets/images/amo.jpg');
+      background-image: url('/assets/images/foto.avif');
+      background-repeat: no-repeat;
+      filter: grayscale(100%);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
