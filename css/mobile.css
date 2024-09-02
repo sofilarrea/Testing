@@ -260,7 +260,7 @@ span{
 }
 /* Parallax */
 .parallax {
-    background-image: url('/assets/images/hero-bg.jpg');
+    background-image: url('/assets/images/work.png');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -1018,10 +1018,11 @@ color: rgb(255, 255, 255);
  */
     /* i n d e x   g l o b a l */
     .areas-de-practica-dos {
-      background-image: url('/assets/images/foto.avif');
-      background-repeat: no-repeat;
-      filter: grayscale(100%);
-      background-size: cover;
+/*       background-image: url('/assets/images/hero-bg.jpg');
+
+ */      background-repeat: no-repeat;
+/*       filter: grayscale(100%);
+ */      background-size: cover;
       background-position: center;
       background-attachment: fixed;
       min-height: 100vh;
@@ -1030,7 +1031,8 @@ color: rgb(255, 255, 255);
       flex-direction: column;
       align-items: center;
       width: 100%;
-      padding-top: 80px; /* Ajusta el espacio superior para evitar superposición con la navbar */
+      padding-top: 80px;
+      background-color: rgb(58, 58, 58);
     }
 
     .container-ideario {
@@ -1042,7 +1044,7 @@ color: rgb(255, 255, 255);
     }
 
     .card {
-      background-color: #222; /* Fondo oscuro para la card */
+   /*    background-color: #222; */
       border-radius: 8px; /* Bordes redondeados */
       padding: 20px;
       margin-top: 20px;
