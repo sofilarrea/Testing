@@ -306,7 +306,7 @@ span{
  }
 
   .section-contacto{
-    background-color:#0d0d0d;
+    background-color:#171715;
     width: 100%;
     flex-direction: column;
     position: relative;
@@ -736,7 +736,7 @@ color: rgb(255, 255, 255);
 
   font-family: 'Roboto Condensed', sans-serif;
   position: relative;
-  top: 15%;
+  top: 19%;
   color: rgba(57, 56, 56, 0.648);
   font-family: var(--font-family-jomlhari);
   font-size: 3.3rem;
@@ -749,7 +749,7 @@ color: rgb(255, 255, 255);
 
 .encima-socios-guillermo{
   position: absolute;
-  top: 19%;
+  top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
