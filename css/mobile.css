@@ -260,11 +260,11 @@ span{
 }
 /* Parallax */
 .parallax {
-    background-image: url('/assets/images/work.png');
+    background-image: url('/assets/images/workdos.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 70vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -913,7 +913,7 @@ color: rgb(255, 255, 255);
 }
 .ag-courses-item_date {
   font-weight: bold;
-  color: #f9b13495;
+  color: #803823;
 
   -webkit-transition: color .5s ease;
   -o-transition: color .5s ease;
@@ -1032,7 +1032,7 @@ color: rgb(255, 255, 255);
       align-items: center;
       width: 100%;
       padding-top: 80px;
-      background-color: rgb(58, 58, 58);
+      background-color:#1D1D1B;
     }
 
     .container-ideario {
