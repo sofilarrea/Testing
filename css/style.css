@@ -33,5 +33,6 @@ body, html, a, ul{
     text-decoration: none;
     font-family: "Roboto Slab", serif;
   /*   background-color: #1D1D1B; */
+  scroll-behavior: smooth;
 
 }

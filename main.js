@@ -19,3 +19,13 @@ document.querySelectorAll(".ver-mas-enlace").forEach(enlace => {
     }
   });
 });
+
+const carousel = document.querySelector('.carousel');
+
+carousel.addEventListener('mouseover', () => {
+  carousel.classList.add('paused'); // Agrega una clase para pausar el carrusel
+});
+
+carousel.addEventListener('mouseout', () => {
+  carousel.classList.remove('paused'); // Elimina la clase para reanudar el carrusel
+});
