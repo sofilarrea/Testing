@@ -21,11 +21,27 @@ document.querySelectorAll(".ver-mas-enlace").forEach(enlace => {
 });
 
 const carousel = document.querySelector('.carousel');
+const items = Array.from(document.querySelectorAll('.carousel-item'));
+const pixelsPerStep = 1; // Píxeles que se desplaza en cada paso
+const intervalTime = 20; // Tiempo entre cada desplazamiento (en milisegundos)
 
-carousel.addEventListener('mouseover', () => {
-  carousel.classList.add('paused'); // Agrega una clase para pausar el carrusel
+// Clona los elementos del carrusel para crear un bucle infinito
+items.forEach(item => {
+  const clone = item.cloneNode(true);
+  carousel.appendChild(clone);
 });
 
-carousel.addEventListener('mouseout', () => {
-  carousel.classList.remove('paused'); // Elimina la clase para reanudar el carrusel
-});
+let scrollAmount = 0;
+
+function autoScroll() {
+  scrollAmount -= pixelsPerStep;
+  carousel.style.transform = `translateX(${scrollAmount}px)`;
+
+  // Si se ha desplazado más allá del ancho original, reiniciar el desplazamiento
+  if (Math.abs(scrollAmount) >= carousel.scrollWidth / 2) {
+    scrollAmount = 0;
+  }
+}
+
+// Mover el carrusel de manera continua
+setInterval(autoScroll, intervalTime);

@@ -17,8 +17,9 @@
  }
 
  .areas h2, .areas-socios h2,
- .areas-contacto h2{
-    font-size: 6rem;
+ .areas-contacto h2,
+ .areas-empresas h2{
+    font-size: 5rem;
  }
  .encima h3,
  .encima-contacto h3{
@@ -40,5 +41,6 @@
   width: 96%;
  }
  .areas-empresas{
-  left: 26%;
+  left: 29%;
+  top: 3%;
  }
