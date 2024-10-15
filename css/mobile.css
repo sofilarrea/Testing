@@ -1162,6 +1162,7 @@ color: rgb(255, 255, 255);
   font-size: 1.5rem;
   font-weight: bold;
   white-space: nowrap;
+  letter-spacing: 1px;
 }
 .empresas{
   display: flex;
