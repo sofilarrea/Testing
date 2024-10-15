@@ -260,7 +260,7 @@ span{
 }
 /* Parallax */
 .parallax {
-    background-image: url('/assets/images/work.png');
+    background-image: url('/assets/images/hero.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
