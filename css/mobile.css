@@ -260,7 +260,7 @@ span{
 }
 /* Parallax */
 .parallax {
-    background-image: url('/assets/images/work.png');
+    background-image: url('/assets/images/07d5cf27bde9f5cc74a6e71273324ef0.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -269,8 +269,8 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: grayscale(30%) brightness(70%);
-}
+/*     filter: grayscale(0%) brightness(99%);
+ */}
 .content__firma p{
   font-family: 1.2rem;
  position: relative;
