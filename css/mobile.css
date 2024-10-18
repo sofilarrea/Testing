@@ -1199,7 +1199,6 @@ color: rgb(255, 255, 255);
   text-align: center;
 }
 .canizzo{
-  background-image: url('/assets/images/hero-bg.jpg');
 }
 /* Estilos para móviles primero */
 
@@ -1210,6 +1209,9 @@ color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('/assets/images/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-card {
