@@ -33,3 +33,7 @@
 .areas-empresas {
   left: 15%;
 }
+.section-card {
+  max-width: 800px;
+  padding: 40px;
+}
