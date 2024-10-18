@@ -44,3 +44,18 @@
   left: 37%;
   top: 3%;
  }
+
+
+      .section-card {
+        padding: 30px;
+        border-radius: 20px;
+      }
+
+      .paragraph {
+        font-size: 1rem;
+      }
+
+      .heading-primary {
+        font-size: 2rem;
+      }
+    
