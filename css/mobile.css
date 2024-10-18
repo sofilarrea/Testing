@@ -1078,6 +1078,7 @@ color: rgb(255, 255, 255);
       cursor: pointer; /* Cursor de mano */
       transition: color 0.3s ease; /* Transición suave para el color */
       margin-top: 45px;
+      margin-left: 50%;
     }
 
     .ver-mas-enlace:hover {
