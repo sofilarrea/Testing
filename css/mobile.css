@@ -260,7 +260,7 @@ span{
 }
 /* Parallax */
 .parallax {
-    background-image: url('/assets/images/07d5cf27bde9f5cc74a6e71273324ef0.jpg');
+    background-image: url('/assets/images/a71d44f588a65bf9fa05a712def35e18\ \(1\).jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -290,7 +290,7 @@ span{
     justify-content: center;
     align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .areas-contacto h2{
@@ -913,7 +913,7 @@ color: rgb(255, 255, 255);
 }
 .ag-courses-item_date {
   font-weight: bold;
-  color: #803823;
+  color: #8b8685;
 
   -webkit-transition: color .5s ease;
   -o-transition: color .5s ease;
@@ -1141,7 +1141,7 @@ color: rgb(255, 255, 255);
 
 
 /* Empresas */
-.areas-empresas{
+/* .areas-empresas{
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 4rem;
   position: relative;
@@ -1151,9 +1151,9 @@ color: rgb(255, 255, 255);
     color: rgba(55, 55, 55, 0.648);
     font-family: var(--font-family-jomlhari);
     font-size: 3rem;
-}
-.encima-empresas h3{
-  position: relative;
+} */
+/* .encima-empresas h3{
+  position: absolute;
   top: -476%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1163,7 +1163,7 @@ color: rgb(255, 255, 255);
   font-weight: bold;
   white-space: nowrap;
   letter-spacing: 2px;
-}
+} */
 .empresas{
   display: flex;
   flex-direction: column;
@@ -1171,13 +1171,10 @@ color: rgb(255, 255, 255);
   justify-content: center;
   border: none;
   height: 70vh;
+  position: relative;
 }
-.empresas-titulo{
-  font-size: 2.1rem;
-  color: whitesmoke;
-  padding: 14px;
 
-}
+
 
 .carousel-item {
   background: none;
@@ -1195,4 +1192,19 @@ color: rgb(255, 255, 255);
 .carousel-item p {
   font-size: 1em;
   color: #555;
+}
+
+
+ .encima-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Ajusta según sea necesario */
+  margin-bottom: 20px; /* Espacio entre el título y el carousel */
+}
+
+.titulo-centrado {
+  font-size: 2em;
+  color: #f3ecec; /* Color del título */
+  text-align: center;
 }
