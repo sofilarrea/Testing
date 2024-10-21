@@ -136,12 +136,14 @@ display: none;
 }
 .parrafo-la-firma h5{
   color: white;
-  font-weight: 500;
+  font-weight: 300;
     line-height: 1.4;
     letter-spacing: .5px;
     margin-bottom: 15px;
   font-size: 25px;
-  padding: 0 10px;
+  padding: 0 70px;
+  text-align: center;
+
 }
 .segundo-parrafo{
   font-size: 15px;
@@ -151,6 +153,7 @@ display: none;
   line-height: 1.8;
   margin: 0;
   padding: 0 10px;
+  text-align: center;
 }
 span{
   font-style: italic;
@@ -1099,7 +1102,7 @@ color: rgb(255, 255, 255);
     .carousel-container {
       overflow: hidden;
       width: 100%;
-      
+
     }
 
     .carousel {
