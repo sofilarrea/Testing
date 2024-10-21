@@ -140,21 +140,12 @@ display: none;
     line-height: 1.4;
     letter-spacing: .5px;
     margin-bottom: 15px;
-  font-size: 25px;
-  padding: 0 70px;
+  font-size: 1.1rem;
+  padding: 0 80px;
   text-align: center;
 
 }
-.segundo-parrafo{
-  font-size: 15px;
-  font-weight: 300;
-  font-family: 'Rubik', sans-serif;
-  color: #ddd;
-  line-height: 1.8;
-  margin: 0;
-  padding: 0 10px;
-  text-align: center;
-}
+
 span{
   font-style: italic;
   font-family: "Merriweather", serif;
