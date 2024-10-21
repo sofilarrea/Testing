@@ -133,6 +133,9 @@ display: none;
 }
 .container-la-firma{
   margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .parrafo-la-firma h5{
   color: white;
