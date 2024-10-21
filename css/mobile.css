@@ -1098,7 +1098,8 @@ color: rgb(255, 255, 255);
 
     .carousel-container {
       overflow: hidden;
-      width: 100%; /* Ajusta el tamaño al contenedor */
+      width: 100%;
+      
     }
 
     .carousel {
@@ -1111,6 +1112,7 @@ color: rgb(255, 255, 255);
       padding: 10px;
       width: 500px; /* Ajusta el ancho de cada item según sea necesario */
       box-sizing: border-box;
+      margin: 50px auto;
     }
 
 
@@ -1126,12 +1128,7 @@ color: rgb(255, 255, 255);
     .carousel.paused {
       animation-play-state: paused;
     }
-.empresas{
-  background-color: #1a1a1a;
-  color: #fff;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 
-}
 
 
 /* Empresas */
@@ -1166,6 +1163,8 @@ color: rgb(255, 255, 255);
   border: none;
   height: 70vh;
   position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
 
