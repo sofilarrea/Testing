@@ -1078,7 +1078,7 @@ color: rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
   border: none;
-  height: 70vh;
+  height: 60vh;
   position: relative;
   background-color: #ffffff;
   color: #060606;
@@ -1134,13 +1134,12 @@ color: rgb(255, 255, 255);
 }
 
 .section-card {
-  background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  /* background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
   backdrop-filter: blur(12px) saturate(180%); /* Efecto de blur y saturación */
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border-radius: 15px;
+  border-radius: 15px; */
   padding: 20px;
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
