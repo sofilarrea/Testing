@@ -1071,29 +1071,7 @@ color: rgb(255, 255, 255);
 
 
 /* Empresas */
-/* .areas-empresas{
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 4rem;
-  position: relative;
-  top: -1%;
-  left: 47%;
-    transform: translate(-50%, -50%);
-    color: rgba(55, 55, 55, 0.648);
-    font-family: var(--font-family-jomlhari);
-    font-size: 3rem;
-} */
-/* .encima-empresas h3{
-  position: absolute;
-  top: -476%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.926);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  white-space: nowrap;
-  letter-spacing: 2px;
-} */
+
 .empresas{
   display: flex;
   flex-direction: column;
@@ -1102,8 +1080,8 @@ color: rgb(255, 255, 255);
   border: none;
   height: 70vh;
   position: relative;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #ffffff;
+  color: #060606;
 }
 
 
@@ -1118,7 +1096,7 @@ color: rgb(255, 255, 255);
 
 .carousel-item h3 {
   font-size: 1.5em;
-  color: #f3ecec;
+  color: #1d1c1c;
 }
 
 .carousel-item p {
@@ -1136,13 +1114,12 @@ color: rgb(255, 255, 255);
 }
 
 .titulo-centrado {
-  font-size: 2em;
-  color: #f3ecec; /* Color del título */
+  font-size: 1.8rem;
+  color: #0c0c0c; /* Color del título */
   text-align: center;
+  margin-bottom: 40px;
 }
-.canizzo{
-}
-/* Estilos para móviles primero */
+
 
 .canizzo {
   width: 100%;
