@@ -290,7 +290,17 @@ display: none;
       font-weight: bold;
       white-space: nowrap;
   }
-
+.ecnima-clientes h3{
+  position: absolute;
+      top: 24%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(12, 12, 12);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      white-space: nowrap;
+}
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #aca49c;
     font-size: 0.875em;
@@ -771,7 +781,12 @@ color: rgb(255, 255, 255);
   font-size: 1.8rem;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
-
+}
+.empresas h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 44px;
 
 }
 .ag-format-container {
@@ -1138,7 +1153,7 @@ color: rgb(255, 255, 255);
   /* background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
   backdrop-filter: blur(12px) saturate(180%); /* Efecto de blur y saturación */
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border-radius: 15px; */
+  border-radius: 15px;
   padding: 20px;
   color: #fff;
   width: 100%;
