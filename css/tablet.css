@@ -22,10 +22,7 @@
  .areas-empresas h2{
     font-size: 5rem;
  }
- .encima h3,
- .encima-contacto h3{
-    font-size: 3.1rem;
- }
+
  .content__firma p{
     font-size: 1.5rem;
  }
@@ -47,26 +44,29 @@
  }
 
 
-      .section-card {
-        padding: 30px;
-        border-radius: 20px;
-      }
+.section-card {
+  padding: 30px;
+  border-radius: 20px;
+}
 
-      .paragraph {
-        font-size: 1rem;
-      }
+.paragraph {
+  font-size: 1rem;
+}
 
-      .heading-primary {
-        font-size: 2rem;
-      }
-      .parrafo-la-firma h5{
-        font-size: 29x;
-        padding: 0px 118px
+.heading-primary {
+  font-size: 2rem;
+}
+.parrafo-la-firma h5{
+  font-size: 29x;
+  padding: 0px 118px
 
-      }
-      .la-firma {
-        padding: 117px 0;
-      }
-      .logos {
-        grid-template-columns: repeat(4, 1fr);
-    }
+}
+.la-firma {
+  padding: 117px 0;
+}
+.logos {
+  grid-template-columns: repeat(4, 1fr);
+}
+.empresas{
+  height: 70vh;
+}
