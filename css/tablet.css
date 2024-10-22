@@ -6,7 +6,8 @@
     margin-right: 15px;
 }
 .logos-up a p, .logos-down a p {
-    font-size: 1rem;
+    font-size: 1.3em;
+    font-weight: 400;
 }
 .logo-img {
     width: 59px;
@@ -57,4 +58,9 @@
 
       .heading-primary {
         font-size: 2rem;
+      }
+      .parrafo-la-firma h5{
+        font-size: 29x;
+        padding: 0px 118px
+
       }
