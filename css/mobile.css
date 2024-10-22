@@ -149,14 +149,14 @@ display: none;
 
 }
 /* Section Áreas de práctica */
-.areas-de-practica{
-  min-height: 100vh;
+/* .areas-de-practica{
+  height: 110vh;
   background-color:#FFFFFF;
-  flex-direction: column;
   position: relative;
-  align-items: center;
   width: 100%;
-}
+  padding: 40px 20px;
+  text-align: center;
+} */
 
 .section-socios{
    background-color: var(--color-primary);
@@ -167,54 +167,46 @@ display: none;
    align-items: center;
    display: flex;
 }
-.areas h2,
-.areas-socios h2{
-   font-family: 'Roboto Condensed', sans-serif;
-   position: absolute;
-   top: 16%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   color: rgba(63, 63, 63, 0.549);
-   font-family: var(--font-family-jomlhari);
-   font-size: 4.5rem;
-    white-space: nowrap;
-    letter-spacing: 1px;
+
+.areas-de-practica {
+  padding: 40px 3px;
+  text-align: center;
 }
 
-.encima h3 {
-    position: absolute;
-    top: 16%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #1D1D1B;
-    font-family: "Merriweather", serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    white-space: nowrap;
+.areas-de-practica h3 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
 }
-.logos{
-  display: flex;
-  flex-direction: column;
+
+/* Contenedor de los logos */
+.logos {
+  max-width: 1200px; /* Limita el ancho total de los logos */
+  margin: 0 auto; /* Centra el contenedor de logos */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
+
+/* Aplicamos el mismo estilo a logos-up y logos-down para mantener alineación */
 .logos-up,
-.logos-down{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
+.logos-down {
+  display: contents; /* Mantiene el mismo diseño en ambas secciones */
+}
 
+.logo {
+  text-align: center;
 }
-.logos-up{
-  position: absolute;
- top: 35%;
-  flex-shrink: 1;
-  flex-grow: 1;
+
+.logo-img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 8px;
+  filter: grayscale(100%) brightness(50%);
 }
-.logos-down{
-  position: absolute;
-  bottom: 8%;
-}
-.logo{
+
+
+
+/* .logo{
   width: 100px;
   display: flex;
   flex-direction: column;
@@ -231,7 +223,7 @@ display: none;
     align-items: center;
     margin-bottom: 10px;
     filter: grayscale(100%) brightness(150%);
-}
+} */
 .logos-up a p,
 .logos-down a p {
   color: rgb(7, 7, 7);
