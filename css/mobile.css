@@ -43,7 +43,7 @@
 .navbar-links li a {
 text-decoration: none;
 color: rgb(185, 180, 180);
-font-family: "roboto", sans-serif;
+font-family: "Gothic A1", sans-serif;
 font-size: 0.9rem;
 font-weight: bold;
 text-transform: uppercase;
@@ -146,18 +146,8 @@ display: none;
   font-size: 22px;
  /*  padding: 0 70px; */
   text-align: center;
-
+  font-family: "Gothic A1", sans-serif;
 }
-/* Section Áreas de práctica */
-/* .areas-de-practica{
-  height: 110vh;
-  background-color:#FFFFFF;
-  position: relative;
-  width: 100%;
-  padding: 40px 20px;
-  text-align: center;
-} */
-
 
 
 .areas-de-practica {
@@ -168,8 +158,7 @@ display: none;
 .areas-de-practica h3 {
   font-size: 1.8rem;
   margin-bottom: 80px;
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: "Gothic A1", sans-serif;
 }
 
 /* Contenedor de los logos */
@@ -221,11 +210,11 @@ display: none;
 .logos-up a p,
 .logos-down a p {
   color: rgb(7, 7, 7);
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 1px;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
 }
 .loguito{
   margin-top: 10px;
@@ -285,7 +274,7 @@ display: none;
       left: 50%;
       transform: translate(-50%, -50%);
       color: rgb(240, 232, 232);
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Gothic A1", sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
       white-space: nowrap;
@@ -464,6 +453,7 @@ display: none;
    padding: 80px 30px 20px 30px;
    color: #f2eeee;
    background-color: #0b0b0b;
+
  }
  .footer-areas-de-practica{
  background-color: #010101;
@@ -780,12 +770,12 @@ color: rgb(255, 255, 255);
   color: whitesmoke;
   font-size: 1.8rem;
   margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Gothic A1", sans-serif;
 }
 .empresas h3 {
   font-size: 1.8rem;
   margin-bottom: 12px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Gothic A1", sans-serif;
   margin-top: 44px;
 
 }
@@ -921,7 +911,7 @@ color: rgb(255, 255, 255);
   .ag-courses-item_title {
     min-height: 72px;
     line-height: 1;
-
+    font-family: "Gothic A1", sans-serif;
     font-size: 24px;
   }
   .ag-courses-item_link {
@@ -1183,4 +1173,7 @@ color: rgb(255, 255, 255);
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.85); /* Texto más legible */
   margin-bottom: 10px;
+}
+.icon {
+  width: 50px;
 }
