@@ -495,7 +495,7 @@ display: none;
 
  .footer ul {
    list-style: none;
-   padding-left: 0;
+   padding-left: 40px;
  }
 
  .footer li {
@@ -1174,6 +1174,79 @@ color: rgb(255, 255, 255);
   color: rgba(255, 255, 255, 0.85); /* Texto más legible */
   margin-bottom: 10px;
 }
-.icon {
-  width: 50px;
+.icono{
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.areas-de-practica-dos {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.container-ideario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 250px; /* Ajusta el tamaño mínimo de la card */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.card-header i {
+  margin-right: 10px;
+  color: #000000; /* Ajusta el color del ícono según tu tema */
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.card p {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.ver-mas-enlace {
+  text-decoration: none;
+  color: #040404; /* Color del enlace */
+  font-weight: bold;
+}
+
+.ver-mas-enlace:hover {
+  text-decoration: underline;
+}
+.oculto {
+  display: none; /* Oculta el contenido */
+}
+
+.mostrar {
+  display: block; /* Muestra el contenido */
 }

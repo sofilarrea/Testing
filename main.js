@@ -23,7 +23,7 @@ document.querySelectorAll(".ver-mas-enlace").forEach(enlace => {
 const carousel = document.querySelector('.carousel');
 const items = Array.from(document.querySelectorAll('.carousel-item'));
 const pixelsPerStep = 1; // Píxeles que se desplaza en cada paso
-const intervalTime = 20; // Tiempo entre cada desplazamiento (en milisegundos)
+const intervalTime = 10; // Tiempo entre cada desplazamiento (en milisegundos)
 
 // Clona los elementos del carrusel para crear un bucle infinito
 items.forEach(item => {
