@@ -495,7 +495,8 @@ display: none;
 
  .footer ul {
    list-style: none;
-   padding-left: 40px;
+   padding-left: 16px;
+   margin-bottom: 50px;
  }
 
  .footer li {
@@ -565,7 +566,7 @@ display: none;
    }
 
    .footer__addr {
-     flex: 2 0px;
+     flex: 1 0px;
    }
 
    .footer__nav {
