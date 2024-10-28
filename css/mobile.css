@@ -564,10 +564,10 @@ display: none;
    .nav__item--extra {
      flex-grow: 2;
    }
-
+/*
    .footer__addr {
      flex: 1 0px;
-   }
+   } */
 
    .footer__nav {
      flex: 2 0px;
