@@ -485,7 +485,7 @@ display: none;
 
  .nav__title {
    font-weight: 400;
-   font-size: 15px;
+   font-size: 10px;
  }
 
  .footer address {
@@ -565,7 +565,7 @@ display: none;
    }
 
    .footer__addr {
-     flex: 1 0px;
+     flex: 2 0px;
    }
 
    .footer__nav {
