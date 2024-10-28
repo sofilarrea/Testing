@@ -367,15 +367,12 @@ display: none;
     position: relative;
     width: 370px;
     padding-top: 161px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
   input {
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
-    width: 600px;
+    width: 370px;
     height: 50px;
     padding: 0px 15px 0px 15px;
 
@@ -398,8 +395,8 @@ display: none;
   }
 
   textarea {
-    width: 600px;
-    max-width: 870px;
+    width: 370px;
+    max-width: 470px;
     height: 110px;
     max-height: 110px;
     padding: 15px;
@@ -425,7 +422,7 @@ display: none;
   }
 
   #submit {
-    width: 600px;
+    width: 370px;
 
     padding: 0;
     margin: -5px 0px 0px 0px;
