@@ -270,7 +270,7 @@ display: none;
  }
   .encima-contacto h3{
       position: absolute;
-      top: 24%;
+      top: 11%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: rgb(240, 232, 232);
@@ -366,7 +366,7 @@ display: none;
   #form {
     position: relative;
     width: 370px;
-    padding-top: 161px;
+    padding-top: 70px;
 }
 
   input {
