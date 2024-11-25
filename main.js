@@ -43,5 +43,14 @@ function autoScroll() {
   }
 }
 
-// Mover el carrusel de manera continua
-setInterval(autoScroll, intervalTime);
+
+function sendMail() {
+  
+  let parms = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+
+  }
+  emailjs.send("service_59kqwnd", "template_6xy4dkt",parms).then(alert("Email Enviado"))
+}
