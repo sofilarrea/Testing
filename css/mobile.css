@@ -137,15 +137,27 @@ display: none;
   justify-content: center;
   align-items: center;
 }
-.parrafo-la-firma h5{
+/* .parrafo-la-firma h5{
   color: white;
   font-weight: 300;
     line-height: 1.4;
     letter-spacing: .5px;
     margin-bottom: 15px;
   font-size: 22px;
- /*  padding: 0 70px; */
+ 
   text-align: center;
+  font-family: "Gothic A1", sans-serif;
+}
+ */
+
+ .parrafo-la-firma h5 {
+  color: white;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: .5px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-align: justify;
   font-family: "Gothic A1", sans-serif;
 }
 
