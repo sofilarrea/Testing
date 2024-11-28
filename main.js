@@ -22,10 +22,10 @@ document.querySelectorAll(".ver-mas-enlace").forEach(enlace => {
 
 const carousel = document.querySelector('.carousel');
 const items = Array.from(document.querySelectorAll('.carousel-item'));
-const pixelsPerStep = 1; // Píxeles que se desplaza en cada paso
-const intervalTime = 10; // Tiempo entre cada desplazamiento (en milisegundos)
+const pixelsPerStep = 1; // Cantidad de píxeles a mover en cada paso
+const intervalTime = 10; // Tiempo entre cada desplazamiento
 
-// Clona los elementos del carrusel para crear un bucle infinito
+// Duplica los elementos para simular un carrusel infinito
 items.forEach(item => {
   const clone = item.cloneNode(true);
   carousel.appendChild(clone);
@@ -35,13 +35,19 @@ let scrollAmount = 0;
 
 function autoScroll() {
   scrollAmount -= pixelsPerStep;
+
+  // Actualiza el transform para mover el carrusel
   carousel.style.transform = `translateX(${scrollAmount}px)`;
 
-  // Si se ha desplazado más allá del ancho original, reiniciar el desplazamiento
-  if (Math.abs(scrollAmount) >= carousel.scrollWidth / 2) {
+  // Reinicia el scroll cuando llega al final
+  const totalWidth = items.length * items[0].offsetWidth; // Ancho total de los ítems originales
+  if (Math.abs(scrollAmount) >= totalWidth) {
     scrollAmount = 0;
   }
 }
+
+// Inicia el desplazamiento automático
+setInterval(autoScroll, intervalTime);
 
 
 function sendMail() {
