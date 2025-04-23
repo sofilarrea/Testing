@@ -247,8 +247,11 @@ display: none;
     display: flex;
     align-items: center;
     justify-content: center;
-/*     filter: grayscale(0%) brightness(99%);
- */}
+/*     filter: grayscale(0%) brightness(99%);*/
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+}
 
 
 
