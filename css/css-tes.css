@@ -682,7 +682,7 @@ form.topBefore input[type="submit"]:hover {
 .heading-secondary {
   font-family: 'Manrope', sans-serif;
   font-size: 1.2rem;
-  color: #C0A97A;
+  color: #ffffff;
   margin-top: 20px;
 }
 
@@ -726,4 +726,84 @@ body::before {
   height: 100%;
   background: rgba(0,0,0,0.7); /* Oscurece un poco la imagen */
   z-index: -1;
+}
+
+/* Global*/
+
+.areas-de-practica-dos {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-ideario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.card {
+  background-color: #181818;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 30px 20px;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+/* Iconos */
+.icono-blanco {
+  color: #C0A97A;
+  margin-bottom: 15px;
+}
+
+/* Títulos */
+.title-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Párrafos */
+.parrafo {
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Enlaces "Ver Más" */
+.ver-mas-enlace {
+  color: #C0A97A;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.ver-mas-enlace:hover {
+  color: #fff;
+}
+
+/* Contenido extra oculto */
+.contenido-extra {
+  margin-top: 20px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card.expandida .contenido-extra {
+  display: block;
+  opacity: 1;
 }
