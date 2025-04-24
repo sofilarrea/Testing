@@ -676,13 +676,13 @@ form.topBefore input[type="submit"]:hover {
 }
 
 .apellido {
-  color: #C0A97A; /* Dorado para resaltar apellido */
+  color: white; /* Dorado para resaltar apellido */
 }
 
 .heading-secondary {
   font-family: 'Manrope', sans-serif;
   font-size: 1.2rem;
-  color: #white;
+  color: #C0A97A;
   margin-top: 20px;
 }
 
