@@ -61,3 +61,12 @@ function sendMail() {
   emailjs.send("service_59kqwnd", "template_6xy4dkt",parms).then(alert("Email Enviado"))
 }
 
+const parallaxBg = document.querySelector('.parallax-bg');
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+if (!isIOS) {
+  window.addEventListener('scroll', () => {
+    const offset = window.pageYOffset;
+    parallaxBg.style.transform = `translateY(${offset * 0.4}px)`;
+  });
+}
