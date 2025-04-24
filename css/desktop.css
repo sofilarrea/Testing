@@ -35,7 +35,6 @@
 .parrafo-la-firma h5 {
   text-align: justify;
   text-justify: inter-word; /* Distribuye mejor las palabras */
-  hyphens: auto; /* Habilita guiones automáticos si el navegador lo soporta */
 }
 .ag-courses_box {
   display: grid;
