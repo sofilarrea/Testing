@@ -18,18 +18,6 @@
     padding: 50px;
 }
 
-.ag-courses_item {
-  -ms-flex-preferred-size: calc(50% - 30px);
-  flex-basis: calc(50% - 30px);
-}
-.ag-courses-item_title {
-  font-size: 24px;
-}
-.encima-socios-guillermo{
-  top: 17%;
-}
-
-
 
 .section-card {
   max-width: 70%;
@@ -42,4 +30,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.parrafo-la-firma h5 {
+  text-align: justify;
+  text-justify: inter-word; /* Distribuye mejor las palabras */
+  hyphens: auto; /* Habilita guiones automáticos si el navegador lo soporta */
+}
+.ag-courses_box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* siempre dos columnas */
+  gap: 30px;
+  max-width: 1000px; /* opcional, para centrar */
+  margin: 0 auto; /* centra la grilla */
 }

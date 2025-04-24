@@ -56,11 +56,7 @@
 .heading-primary {
   font-size: 2rem;
 }
-.parrafo-la-firma h5{
-  font-size: 27px;
-  padding: 0px 118px
 
-}
 
 .logos {
   grid-template-columns: repeat(4, 1fr);
@@ -71,4 +67,11 @@
 
 .footer__addr {
   flex: 2 0px;
+}
+.ag-courses_box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* siempre dos columnas */
+  gap: 30px;
+  max-width: 1000px; /* opcional, para centrar */
+  margin: 0 auto; /* centra la grilla */
 }

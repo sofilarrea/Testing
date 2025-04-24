@@ -344,27 +344,6 @@ display: none;
  -o-background-size: cover;
 }
 
-.parallax {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.parallax-bg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 120%;
-  background-image: url('/assets/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
   /* Contact */
   .container{
     justify-content: center;
@@ -881,6 +860,137 @@ color: rgb(255, 255, 255);
 
 
 /* - Socios -- */
+.section-socios {
+  width: 100%;
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  padding: 100px 20px;
+}
+.ag-courses_box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* siempre dos columnas */
+  gap: 30px;
+  max-width: 1000px; /* opcional, para centrar */
+  margin: 0 auto; /* centra la grilla */
+}
+
+.ag-courses_item {
+  background-color: #111111;
+  border: 1px solid #C0A97A;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ag-courses_item:hover {
+  transform: translateY(-5px);
+  border-color: #d4b07e; /* un dorado más claro al hover */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.ag-courses-item_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif; /* O 'Inter', la que prefieras */
+}
+
+.ag-courses-item_title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.ag-courses-item_date-box {
+  font-size: 0.9rem;
+  color: #C0A97A;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ag-courses-item_date {
+  font-weight: 400;
+}
+
+
+.areas-de-practica-dos {
+  padding: 40px 20px;
+  background-color: #1D1D1B;
+}
+.areas-de-practica {
+  width: 100%;
+  background: linear-gradient(135deg, #f7f7f7 0%, #ececec 100%);
+  padding: 80px 20px;
+}
+
+.encima-clientes h3 {
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.encima-clientes h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #C0A97A; /* línea dorada opaca */
+  margin: 20px auto 0;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.logos-up, .logos-down {
+  display: grid;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo i.icono {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo:hover i.icono {
+  color: #C0A97A; /* dorado al hover */
+  transform: translateY(-5px);
+}
+
+.logo:hover p {
+  color: #C0A97A;
+}
+
+
+
+
+
+
 /* .section-socios{
   background-color: var(--color-primary);
   width: 100%;
@@ -994,7 +1104,7 @@ color: rgb(255, 255, 255);
   -o-transition: all .5s ease;
   transition: all .5s ease;
 } */
-.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+/* .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
   background-color: #535353;
 }
 .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
@@ -1009,46 +1119,10 @@ color: rgb(255, 255, 255);
 .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
   background-color:  #535353;
 }
+ */
 
 
 
-@media only screen and (max-width: 979px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
-  }
-  .ag-courses-item_title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
-
-}
-@media only screen and (max-width: 639px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .ag-courses-item_title {
-    min-height: 72px;
-    line-height: 1;
-    font-family: "Gothic A1", sans-serif;
-    font-size: 24px;
-  }
-  .ag-courses-item_link {
-    padding: 22px 40px;
-  }
-  .ag-courses-item_date-box {
-    font-size: 16px;
-  }
-}
-.socios-content{
-  margin: 20px auto;
-}
 
 /*
 @media  screen and (max-width: 320px){
@@ -1354,56 +1428,4 @@ color: rgb(255, 255, 255);
 .icono-blanco {
   color: white;
   margin-bottom: 30px;
-}
-.ag-courses_box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* siempre dos columnas */
-  gap: 30px;
-  max-width: 1000px; /* opcional, para centrar */
-  margin: 0 auto; /* centra la grilla */
-}
-
-.ag-courses_item {
-  background-color: #111111;
-  border: 1px solid #C0A97A;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.ag-courses_item:hover {
-  transform: translateY(-5px);
-  border-color: #d4b07e; /* un dorado más claro al hover */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-
-.ag-courses-item_link {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 200px;
-  padding: 20px;
-  text-decoration: none;
-  color: white;
-  font-family: 'Poppins', sans-serif; /* O 'Inter', la que prefieras */
-}
-
-.ag-courses-item_title {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.ag-courses-item_date-box {
-  font-size: 0.9rem;
-  color: #C0A97A;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.ag-courses-item_date {
-  font-weight: 400;
-}
-body {
-  font-family: 'Manrope', sans-serif;
 }
