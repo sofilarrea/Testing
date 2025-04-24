@@ -61,9 +61,7 @@
   padding: 0px 118px
 
 }
-.la-firma {
-  padding: 117px 0;
-}
+
 .logos {
   grid-template-columns: repeat(4, 1fr);
 }

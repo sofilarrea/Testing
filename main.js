@@ -60,3 +60,4 @@ function sendMail() {
   }
   emailjs.send("service_59kqwnd", "template_6xy4dkt",parms).then(alert("Email Enviado"))
 }
+
