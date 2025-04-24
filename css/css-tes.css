@@ -751,3 +751,78 @@ form.topBefore input[type="submit"]:hover {
     font-size: 0.9rem;
   }
 }
+
+
+body {
+  background: #111 url('/assets/images/hero-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7); /* Oscurece para resaltar el texto */
+  z-index: -1;
+}
+.section-card {
+  max-width: 900px;
+  margin: 80px auto;
+  background-color: rgba(0,0,0,0.85); /* Caja oscura semitransparente */
+  padding: 50px 40px;
+  border-left: 3px solid #C0A97A; /* Línea dorada */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  color: white;
+}
+
+/* Título principal */
+.heading-primary h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  text-align: center;
+  color: white;
+}
+
+.apellido {
+  color: white; /* Resalta el apellido en dorado */
+}
+
+/* Subtítulos */
+.heading-secondary {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.2rem;
+  color: #C0A97A;
+  margin-top: 30px;
+}
+
+/* Líneas divisoras */
+hr {
+  border: none;
+  border-top: 2px solid #C0A97A;
+  width: 60px;
+  margin: 10px 0 20px;
+}
+
+/* Texto */
+.paragraph {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Experiencia laboral e idiomas */
+.academia h4:not(.heading-secondary) {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-top: 15px;
+}
