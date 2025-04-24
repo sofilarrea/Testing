@@ -657,79 +657,7 @@ form.topBefore input[type="submit"]:hover {
 
 
 /* SOCIOS */
-.section-card {
-  max-width: 900px;
-  margin: 60px auto;
-  background-color: #111; /* Fondo oscuro */
-  color: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.heading-primary h3 {
-  font-family: 'Manrope', sans-serif;
-  font-size: 2rem;
-  letter-spacing: 4px;
-  text-align: center;
-  color: white;
-}
-
-.apellido {
-  color: white; /* Dorado para resaltar apellido */
-}
-
-.heading-secondary {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-top: 20px;
-}
-
-.paragraph {
-  font-family: 'Merriweather', serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-hr {
-  border: none;
-  border-top: 2px solid #C0A97A;
-  width: 60px;
-  margin: 10px 0 20px;
-}
-.section-card {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-body {
-  background: #111 url('/assets/images/hero-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7); /* Oscurece un poco la imagen */
-  z-index: -1;
-}
-
-/* Global*/
-
+/* --- Fondo general oscuro --- */
 .areas-de-practica-dos {
   background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
   padding: 80px 20px;
@@ -737,45 +665,49 @@ body::before {
   justify-content: center;
 }
 
+/* --- Contenedor con grid --- */
 .container-ideario {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
   max-width: 1200px;
   width: 100%;
 }
 
+/* --- Estilo de las cards --- */
 .card {
   background-color: #181818;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 30px 20px;
   color: white;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
 }
 
+/* --- Hover elegante --- */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Iconos */
+/* --- Iconos dorados --- */
 .icono-blanco {
   color: #C0A97A;
   margin-bottom: 15px;
 }
 
-/* Títulos */
+/* --- Títulos dentro de las cards --- */
 .title-card h3 {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: white;
   margin-bottom: 15px;
+  line-height: 1.4;
 }
 
-/* Párrafos */
+/* --- Párrafos generales --- */
 .parrafo {
   font-family: 'Merriweather', serif;
   font-size: 0.95rem;
@@ -783,7 +715,7 @@ body::before {
   line-height: 1.6;
 }
 
-/* Enlaces "Ver Más" */
+/* --- Enlaces "Ver Más" --- */
 .ver-mas-enlace {
   color: #C0A97A;
   text-decoration: none;
@@ -795,7 +727,7 @@ body::before {
   color: #fff;
 }
 
-/* Contenido extra oculto */
+/* --- Contenido extra oculto --- */
 .contenido-extra {
   margin-top: 20px;
   display: none;
@@ -803,7 +735,19 @@ body::before {
   transition: opacity 0.5s ease;
 }
 
+/* --- Cuando la card está expandida --- */
 .card.expandida .contenido-extra {
   display: block;
   opacity: 1;
+}
+
+/* --- Responsive mejorado --- */
+@media (max-width: 480px) {
+  .title-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .parrafo {
+    font-size: 0.9rem;
+  }
 }
