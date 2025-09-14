@@ -775,7 +775,7 @@ body::before {
   margin: 80px auto;
   background-color: rgba(0,0,0,0.85); /* Caja oscura semitransparente */
   padding: 50px 40px;
-  border-left: 3px solid #C0A97A; /* Línea dorada */
+  /* border-left: 3px solid #C0A97A; */
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
   color: white;
