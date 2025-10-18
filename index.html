@@ -398,74 +398,57 @@
                 <div class="carousel-item">
           </section>
 
-
 <section class="section-contacto" id="section-contacto">
   <div class="container">
     <div class="encima-contacto">
       <h3>Contacto</h3>
     </div>
-<form id="form" class="topBefore">
-  <input id="name" type="text" placeholder="NOMBRE" name="name" required>
-  <input id="email" type="email" placeholder="E-MAIL" name="email" required>
-  <textarea id="message" placeholder="MENSAJE" name="message" required></textarea>
 
-  <!-- reCAPTCHA v2 -->
-  <div class="g-recaptcha" data-sitekey="6LeJRu4rAAAAAJM9BHaskYlUqb7khioAEijwPtjI"></div>
+    <form id="form" class="topBefore">
+      <input id="name" type="text" placeholder="NOMBRE" name="name" required>
+      <input id="email" type="email" placeholder="E-MAIL" name="email" required>
+      <textarea id="message" placeholder="MENSAJE" name="message" required></textarea>
 
-  <input id="submit" type="submit" value="Enviar">
-</form>
+      <!-- reCAPTCHA v2 -->
+      <div class="g-recaptcha" data-sitekey="6LeJRu4rAAAAAJM9BHaskYlUqb7khioAEijwPtjI"></div>
 
-<!-- Script de Google reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
-<!-- Script de Google reCAPTCHA -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
-    <!-- Script reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <input id="submit" type="submit" value="Enviar">
+    </form>
   </div>
 </section>
 
+</main>
 
+<footer class="footer">
+  <div class="footer__addr">
+    <h4 class="footer__logo">
+      <img src="/assets/images/Logo Willy Vizcaino 2.png" alt="logo vizcaino abogados" style="width: 300px">
+    </h4>
+  </div>
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <ul class="nav__ul">
+        <p>WhatsApp</p>
+        <li>
+          <a href="whatsapp://send?phone=+542615798371"> +54 9 2615 79-8371</a>
+        </li>
+        <li>
+          <a href="whatsapp://send?phone=+542615798371">+54 9 2604598764</a>
+        </li>
+        <li>
+          <p>Dirección</p>
+          <a href="#">
+            <address>Boulonge Sur Mer 241 - Ciudad - Mendoza</address>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div class="legal">
+    <p>&copy; 2024. All rights reserved.</p>
+  </div>
+</footer>
 
-
-    </main>
-
-    <footer class="footer">
-        <div class="footer__addr">
-            <h4 class="footer__logo"><img src="/assets/images/Logo Willy Vizcaino 2.png" alt="logo vizcaino abogados" style="width: 300px"></h4>
-        </div>
-        <ul class="footer__nav">
-            <li class="nav__item">
-                <ul class="nav__ul">
-                    <p>WhatsApp</p>
-                    <li>
-                      <a href="whatsapp://send?phone=+542615798371"> +54 9 2615 79-8371</a>
-                    </li>
-                    <li>
-                        <a href="whatsapp://send?phone=+542615798371">+54 9 2604598764</a>
-                      </li>
-                    <li>
-                        <p>Dirección</p>
-                        <a href="#"> <address>
-                         Boulonge Sur Mer 241 - Ciudad - Mendoza <br>
-                          </address></a>
-                    </li>
-                </ul>
-            </li>
-
-                </ul>
-            </li>
-        </ul>
-        <div class="legal">
-            <p>&copy; 2024. All rights reserved.</p>
-           <!-- div class="legal__links">
-                <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
-           </div> -->
-        </div>
-    </footer>
 <!-- Botón flotante WhatsApp -->
 <div class="whatsapp-fab">
   <a href="https://wa.me/542615798371" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -473,8 +456,10 @@
   </a>
 </div>
 
+<!-- Scripts -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
   emailjs.init("trB1-frfrQNxBOI-F"); // tu Public Key
 
@@ -515,9 +500,6 @@
   });
 </script>
 
-    <script src="/main.js"></script>
-    <!-- Botón flotante de WhatsApp -->
-
-
+<script src="/main.js"></script>
 </body>
 </html>
