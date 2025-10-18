@@ -399,23 +399,27 @@
           </section>
 
 
-     <section class="section-contacto" id="section-contacto">
-        <div class="container">
-                <div class="encima-contacto">
-                    <h3>Contacto </h3>
-                </div>
-                <form id="form" class="topBefore">
-                  <input id="name" type="text" placeholder="NOMBRE" name="name" autocomplete="name" required>
-                  <input id="email" type="email" placeholder="E-MAIL" name="email" autocomplete="email" required>
-                  <textarea id="message" placeholder="MENSAJE" name="message" autocomplete="off" required></textarea>
-                  <input id="submit" type="submit" value="Enviar" onclick="sendMail(event)">
-                 <!--  <div class="g-recaptcha" data-sitekey="6LekAooqAAAAAN8tEXwNBeI5e4hrWcwwK01YkIoE"></div> -->
-              </form>
+   <section class="section-contacto" id="section-contacto">
+  <div class="container">
+    <div class="encima-contacto">
+      <h3>Contacto</h3>
+    </div>
 
-              <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <form id="form" class="topBefore">
+      <input id="name" type="text" placeholder="NOMBRE" name="name" required>
+      <input id="email" type="email" placeholder="E-MAIL" name="email" required>
+      <textarea id="message" placeholder="MENSAJE" name="message" required></textarea>
 
-        </div>
-     </section>
+      <!-- reCAPTCHA v2 -->
+<div class="g-recaptcha" data-sitekey="6LfsQu4rAAAAALy70nE4-4FRaMS2I0YuvY8_BHYg"></div>
+
+      <input id="submit" type="submit" value="Enviar" onclick="sendMail(event)">
+    </form>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </div>
+</section>
+
 
     </main>
 
@@ -463,13 +467,36 @@
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script type="text/javascript">
-(function(){
-  emailjs.init({
-    publicKey: "lgwRZhgjE3ieRqFkF",
-  });
-})();
+<script>
+  (function(){
+    emailjs.init("trB1-frfrQNxBOI-F"); // tu public key de EmailJS
+  })();
+
+  function sendMail(event) {
+    event.preventDefault();
+
+    // Validar reCAPTCHA
+    if (!grecaptcha.getResponse()) {
+      alert("Por favor, confirma que no eres un robot.");
+      return;
+    }
+
+    const formEl = document.getElementById("form");
+
+    emailjs.sendForm("service_yas1hvc", "template_6xy4dkt", formEl)
+      .then(() => {
+        alert("¡Mensaje enviado con éxito!");
+        formEl.reset();
+        grecaptcha.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Error al enviar: " + JSON.stringify(err));
+        grecaptcha.reset();
+      });
+  }
 </script>
+
 
     <script src="/main.js"></script>
     <!-- Botón flotante de WhatsApp -->
