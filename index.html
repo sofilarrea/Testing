@@ -404,17 +404,20 @@
     <div class="encima-contacto">
       <h3>Contacto</h3>
     </div>
-
-  <form id="form" class="topBefore" method="POST" action="send.php">
+<form id="form" class="topBefore" method="POST" action="send.php">
   <input id="name" type="text" placeholder="NOMBRE" name="name" required>
   <input id="email" type="email" placeholder="E-MAIL" name="email" required>
   <textarea id="message" placeholder="MENSAJE" name="message" required></textarea>
 
-  <!-- reCAPTCHA v2 con tu Site Key -->
+  <!-- reCAPTCHA v2 -->
   <div class="g-recaptcha" data-sitekey="6LeJRu4rAAAAAJM9BHaskYlUqb7khioAEijwPtjI"></div>
 
   <input id="submit" type="submit" value="Enviar">
 </form>
+
+<!-- Script de Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 <!-- Script de Google reCAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
