@@ -1,16 +1,12 @@
 <?php
-// ✅ Tu clave secreta de reCAPTCHA
 $secretKey = "6LeJRu4rAAAAAMr7ZI3gXxBRyg8BvWqO2fpdTgJz";
-
-// Respuesta del captcha
 $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 
-// Verificar con Google
 $verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
 $data = [
     'secret' => $secretKey,
     'response' => $recaptchaResponse,
-    'remoteip' => $_SERVER['REMOTE_ADDR'] // opcional
+    'remoteip' => $_SERVER['REMOTE_ADDR']
 ];
 
 $options = [
@@ -24,28 +20,28 @@ $context = stream_context_create($options);
 $response = file_get_contents($verifyUrl, false, $context);
 $result = json_decode($response, true);
 
-// 👇 DEBUG: mostramos la respuesta de Google
-echo "<pre>";
-print_r($result);
-echo "</pre>";
-
-// Si es válido, mandamos el correo
 if (!empty($result["success"]) && $result["success"] === true) {
     $name = htmlspecialchars($_POST["name"]);
     $email = htmlspecialchars($_POST["email"]);
     $message = htmlspecialchars($_POST["message"]);
 
-    $to = "tu_correo@ejemplo.com"; // cambia por tu correo real
+    $to = "tu_correo@ejemplo.com"; // tu correo de destino real
     $subject = "Nuevo mensaje desde Vizcaino Abogados";
     $body = "Nombre: $name\nCorreo: $email\n\nMensaje:\n$message";
     $headers = "From: $email\r\nReply-To: $email\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Mensaje enviado correctamente.";
+        echo "<div style='padding:20px; background:#dff0d8; color:#3c763d; border-radius:5px;'>
+                ✅ ¡Mensaje enviado correctamente! Gracias por contactarnos.
+              </div>";
     } else {
-        echo "Hubo un error al enviar el mensaje.";
+        echo "<div style='padding:20px; background:#f2dede; color:#a94442; border-radius:5px;'>
+                ❌ Hubo un error al enviar el mensaje. Intenta más tarde.
+              </div>";
     }
 } else {
-    echo "Captcha inválido.";
+    echo "<div style='padding:20px; background:#f2dede; color:#a94442; border-radius:5px;'>
+            ⚠️ Captcha inválido. Por favor, intenta de nuevo.
+          </div>";
 }
 ?>
