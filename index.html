@@ -397,7 +397,6 @@
                 </div>
                 <div class="carousel-item">
           </section>
-
 <section class="section-contacto" id="section-contacto">
   <div class="container">
     <div class="encima-contacto">
@@ -416,6 +415,7 @@
     </form>
   </div>
 </section>
+
 
 </main>
 
@@ -457,10 +457,19 @@
 </div>
 
 <!-- Scripts -->
+<!-- reCAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
+  // 👇 Endpoint a tu verify.php
+  // En producción:
+  const VERIFY_ENDPOINT = "https://vizcaino-abogados.com/verify.php";
+  // Si probás PHP local con `php -S localhost:8000`:
+  // const VERIFY_ENDPOINT = "http://localhost:8000/verify.php";
+
+  // Inicializar EmailJS
   emailjs.init("trB1-frfrQNxBOI-F"); // tu Public Key
 
   const form = document.getElementById('form');
@@ -474,20 +483,23 @@
     }
 
     try {
-      // 1) Validamos el token en tu backend
+      // 1) Validar token en tu backend
       const fd = new FormData();
       fd.append('token', token);
-      const res = await fetch('verify.php', { method: 'POST', body: fd });
-      const data = await res.json();
 
+      const res = await fetch(VERIFY_ENDPOINT, { method: 'POST', body: fd });
+      if (!res.ok) throw new Error('verify.php ' + res.status);
+
+      const data = await res.json();
       if (!data.ok) {
         alert("Captcha inválido. Intenta de nuevo.");
         grecaptcha.reset();
         return;
       }
 
-      // 2) Si OK: enviamos con EmailJS (desde el navegador)
+      // 2) Si OK → enviar con EmailJS desde el navegador
       await emailjs.sendForm("service_yas1hvc", "template_6xy4dkt", form);
+
       alert("¡Mensaje enviado con éxito!");
       form.reset();
       grecaptcha.reset();
