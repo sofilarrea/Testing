@@ -404,7 +404,7 @@
     <div class="encima-contacto">
       <h3>Contacto</h3>
     </div>
-<form id="form" class="topBefore" method="POST" action="send.php">
+<form id="form" class="topBefore">
   <input id="name" type="text" placeholder="NOMBRE" name="name" required>
   <input id="email" type="email" placeholder="E-MAIL" name="email" required>
   <textarea id="message" placeholder="MENSAJE" name="message" required></textarea>
@@ -473,37 +473,47 @@
   </a>
 </div>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  (function(){
-    emailjs.init("trB1-frfrQNxBOI-F"); // tu Public Key de EmailJS
-  })();
+  emailjs.init("trB1-frfrQNxBOI-F"); // tu Public Key
 
-  function sendMail(event) {
-    event.preventDefault();
+  const form = document.getElementById('form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-    // Validar reCAPTCHA
-    if (!grecaptcha.getResponse()) {
+    const token = grecaptcha.getResponse();
+    if (!token) {
       alert("Por favor, confirma que no eres un robot.");
       return;
     }
 
-    const formEl = document.getElementById("form");
+    try {
+      // 1) Validamos el token en tu backend
+      const fd = new FormData();
+      fd.append('token', token);
+      const res = await fetch('verify.php', { method: 'POST', body: fd });
+      const data = await res.json();
 
-    emailjs.sendForm("service_yas1hvc", "template_6xy4dkt", formEl)
-      .then(() => {
-        alert("¡Mensaje enviado con éxito!");
-        formEl.reset();
+      if (!data.ok) {
+        alert("Captcha inválido. Intenta de nuevo.");
         grecaptcha.reset();
-      })
-      .catch((err) => {
-        console.error(err);
-        alert("Error al enviar: " + JSON.stringify(err));
-        grecaptcha.reset();
-      });
-  }
+        return;
+      }
+
+      // 2) Si OK: enviamos con EmailJS (desde el navegador)
+      await emailjs.sendForm("service_yas1hvc", "template_6xy4dkt", form);
+      alert("¡Mensaje enviado con éxito!");
+      form.reset();
+      grecaptcha.reset();
+
+    } catch (err) {
+      console.error(err);
+      alert("Ocurrió un error al enviar. Intenta de nuevo.");
+      grecaptcha.reset();
+    }
+  });
 </script>
-
 
     <script src="/main.js"></script>
     <!-- Botón flotante de WhatsApp -->
