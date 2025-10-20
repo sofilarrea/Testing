@@ -402,17 +402,17 @@
     <div class="encima-contacto">
       <h3>Contacto</h3>
     </div>
+<form id="form" class="topBefore">
+  <input id="name" type="text" placeholder="NOMBRE" name="name" required>
+  <input id="email" type="email" placeholder="E-MAIL" name="email" required>
+  <textarea id="message" placeholder="MENSAJE" name="message" required></textarea>
 
-    <form id="form" class="topBefore">
-      <input id="name" type="text" placeholder="NOMBRE" name="name" required>
-      <input id="email" type="email" placeholder="E-MAIL" name="email" required>
-      <textarea id="message" placeholder="MENSAJE" name="message" required></textarea>
+  <!-- reCAPTCHA v2 -->
+  <div class="g-recaptcha" data-sitekey="6LeJRu4rAAAAAJM9BHaskYlUqb7khioAEijwPtjI"></div>
 
-      <!-- reCAPTCHA v2 -->
-      <div class="g-recaptcha" data-sitekey="6LeJRu4rAAAAAJM9BHaskYlUqb7khioAEijwPtjI"></div>
+  <input id="submit" type="submit" value="Enviar">
+</form>
 
-      <input id="submit" type="submit" value="Enviar">
-    </form>
   </div>
 </section>
 
@@ -457,25 +457,17 @@
 </div>
 
 <!-- Scripts -->
-<!-- reCAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
-  // 👇 Endpoint a tu verify.php
-  // En producción:
-  const VERIFY_ENDPOINT = "https://vizcaino-abogados.com/verify.php";
-  // Si probás PHP local con `php -S localhost:8000`:
-  // const VERIFY_ENDPOINT = "http://localhost:8000/verify.php";
+  emailjs.init("lgwRZhgjE3ieRqFkF"); // tu Public Key
 
-  // Inicializar EmailJS
-  emailjs.init("trB1-frfrQNxBOI-F"); // tu Public Key
+  const form = document.getElementById("form");
 
-  const form = document.getElementById('form');
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    // Validar reCAPTCHA
     const token = grecaptcha.getResponse();
     if (!token) {
       alert("Por favor, confirma que no eres un robot.");
@@ -483,34 +475,18 @@
     }
 
     try {
-      // 1) Validar token en tu backend
-      const fd = new FormData();
-      fd.append('token', token);
-
-      const res = await fetch(VERIFY_ENDPOINT, { method: 'POST', body: fd });
-      if (!res.ok) throw new Error('verify.php ' + res.status);
-
-      const data = await res.json();
-      if (!data.ok) {
-        alert("Captcha inválido. Intenta de nuevo.");
-        grecaptcha.reset();
-        return;
-      }
-
-      // 2) Si OK → enviar con EmailJS desde el navegador
-      await emailjs.sendForm("service_yas1hvc", "template_6xy4dkt", form);
-
+      await emailjs.sendForm("service_59kqwnd", "template_6xy4dkt", form);
       alert("¡Mensaje enviado con éxito!");
       form.reset();
       grecaptcha.reset();
-
     } catch (err) {
-      console.error(err);
-      alert("Ocurrió un error al enviar. Intenta de nuevo.");
-      grecaptcha.reset();
+      console.error("EmailJS error:", err);
+      alert("Error al enviar. Verifica configuración de EmailJS.");
     }
   });
 </script>
+
+
 
 <script src="/main.js"></script>
 </body>
