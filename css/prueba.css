@@ -33,3 +33,11 @@
   line-height: 1.2;
   margin-bottom: 10px;
 }
+
+.logo-placeholder {
+  width: 100%;
+  max-width: 160px; /* Tamaño máximo que ocuparía un logo */
+  height: 80px;     /* Altura fija para mantener todas las tarjetas iguales */
+  object-fit: contain; /* Para que el logo (cuando lo tengas) no se estire feo */
+  margin-bottom: 15px; /* Espacio entre el logo y el nombre de la empresa */
+}

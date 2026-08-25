@@ -61,9 +61,9 @@
 .logos {
   grid-template-columns: repeat(4, 1fr);
 }
-.empresas{
+/* .empresas{
   height: 70vh;
-}
+} */
 
 .footer__addr {
   flex: 2 0px;

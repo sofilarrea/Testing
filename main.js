@@ -1,23 +1,38 @@
-document.querySelectorAll(".ver-mas-enlace").forEach(enlace => {
-  enlace.addEventListener("click", function(event) {
-    event.preventDefault(); // Evita que el enlace navegue
+// Esperamos a que todo el HTML esté cargado antes de ejecutar la magia
+document.addEventListener("DOMContentLoaded", () => {
 
-    // Encuentra el contenedor de la tarjeta más cercano
-    const card = this.closest('.card');
-    // Encuentra el siguiente elemento .contenido-extra dentro del contenedor de la tarjeta
-    const contenidoExtra = card.querySelector(".contenido-extra");
+  // Seleccionamos todos los enlaces
+  const enlaces = document.querySelectorAll(".ver-mas-enlace");
 
-    // Alternar entre mostrar y ocultar el contenido
-    if (contenidoExtra.classList.contains("oculto")) {
-      contenidoExtra.classList.remove("oculto");
-      contenidoExtra.classList.add("mostrar");
-      this.textContent = "Ver Menos"; // Cambia el texto del enlace
-    } else {
-      contenidoExtra.classList.remove("mostrar");
-      contenidoExtra.classList.add("oculto");
-      this.textContent = "Ver Más"; // Cambia el texto del enlace de nuevo
-    }
+  enlaces.forEach(enlace => {
+    enlace.addEventListener("click", function(event) {
+      event.preventDefault(); // Evita que la página salte hacia arriba
+
+      // Encuentra el contenedor de la tarjeta más cercano
+      const card = this.closest('.card');
+
+      // Encuentra el elemento .contenido-extra dentro de ESA tarjeta
+      const contenidoExtra = card.querySelector(".contenido-extra");
+
+      // SEGURO ANTI-CRASH: Si la tarjeta no tiene contenido extra, frenamos acá.
+      if (!contenidoExtra) {
+        console.warn("Esta tarjeta no tiene un div con la clase .contenido-extra");
+        return;
+      }
+
+      // Alternar entre mostrar y ocultar el contenido
+      if (contenidoExtra.classList.contains("oculto")) {
+        contenidoExtra.classList.remove("oculto");
+        contenidoExtra.classList.add("mostrar");
+        this.textContent = "Ver Menos";
+      } else {
+        contenidoExtra.classList.remove("mostrar");
+        contenidoExtra.classList.add("oculto");
+        this.textContent = "Ver Más";
+      }
+    });
   });
+
 });
 
 const carousel = document.querySelector('.carousel');
