@@ -41,3 +41,20 @@
   object-fit: contain; /* Para que el logo (cuando lo tengas) no se estire feo */
   margin-bottom: 15px; /* Espacio entre el logo y el nombre de la empresa */
 }
+.parrafo-la-firma {
+  max-width: 1100px; /* Forzamos más renglones para que el justificado actúe */
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.parrafo-la-firma p,
+.parrafo-la-firma h5 {
+  color: #ffffff;
+  font-family: 'Merriweather', serif; /* La tipografía serif aporta elegancia clásica */
+  font-size: 1.3rem !important; /* Agrandamos el texto (aprox 21px) */
+  font-weight: 300;
+  line-height: 1.8; /* El aire entre líneas es vital para no empastar la vista */
+  text-align: justify !important;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}

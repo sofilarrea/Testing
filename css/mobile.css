@@ -1176,15 +1176,14 @@ color: rgb(255, 255, 255);
       width: 100%;
     }
 
-    .card {
-   /*    background-color: #222; */
-      border-radius: 8px; /* Bordes redondeados */
-      padding: 20px;
-      margin-top: 20px;
-      width: 90%; /* Ajusta el ancho */
-      max-width: 600px; /* Ancho máximo */
-      position: relative;
-    }
+ .card {
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px;
+  margin-top: 20px;
+  width: 90%; /* Ajusta el ancho */
+  max-width: 600px; /* Ancho máximo */
+  position: relative;
+}
 
     .title-card h3 {
       font-size: 1.5rem;
@@ -1206,13 +1205,23 @@ color: rgb(255, 255, 255);
       align-items: center;
     }
 
-    .oculto {
-      display: none;
-    }
+  .contenido-extra {
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
 
-    .mostrar {
-      display: block;
-    }
+.oculto {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  pointer-events: none; 
+}
+
+.mostrar {
+  max-height: 800px; 
+  opacity: 1;
+  margin-top: 15px;
+}
 
     .ver-mas-enlace:hover {
       color: #0056b3;

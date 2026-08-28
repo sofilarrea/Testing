@@ -1,0 +1,435 @@
+:root{
+  --ink:#15201C;
+  --ink-soft:#3A4642;
+  --stone:#E9E9E3;
+  --paper:#F5F5F1;
+  --agua:#2E6B63;
+  --seco:#A29D90;
+  --line:rgba(21,32,28,.16);
+  --display:"Bodoni Moda","Didot","Bodoni MT",Georgia,serif;
+  --body:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --rail:34px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--stone);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3.5rem)}
+section{padding:clamp(5rem,11vw,9rem) 0;position:relative}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--agua);outline-offset:3px}
+
+/* ---------- eyebrow / headings ---------- */
+.eyebrow{
+  font-size:.6875rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.2em;color:var(--agua);margin-bottom:1.75rem;
+  display:flex;align-items:center;gap:.85rem;
+}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--line);max-width:120px}
+h2.title{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.04;letter-spacing:-.015em;
+  max-width:16ch;
+}
+.lead{font-size:clamp(1.0625rem,1.8vw,1.375rem);line-height:1.5;color:var(--ink-soft);max-width:46ch}
+
+/* ---------- acequia rail (signature) ---------- */
+.acequia{position:fixed;left:var(--rail);top:0;bottom:0;width:1px;background:var(--line);z-index:40}
+.acequia__fill{position:absolute;top:0;left:0;width:1px;height:0;background:var(--agua)}
+.acequia__node{
+  position:absolute;left:-4px;width:9px;height:9px;border-radius:50%;
+  background:var(--stone);border:1px solid var(--line);cursor:pointer;
+  transition:background .25s,border-color .25s,transform .25s;
+}
+.acequia__node span{
+  position:absolute;left:18px;top:50%;transform:translateY(-50%);
+  font-size:.625rem;text-transform:uppercase;letter-spacing:.16em;font-weight:600;
+  white-space:nowrap;color:var(--agua);opacity:0;transition:opacity .25s;pointer-events:none;
+}
+.acequia__node:hover span,.acequia__node.is-active span{opacity:1}
+.acequia__node.is-active{background:var(--agua);border-color:var(--agua);transform:scale(1.25)}
+.progress-top{position:fixed;top:0;left:0;height:2px;background:var(--agua);width:0;z-index:60;display:none}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  padding:1.35rem 0;transition:background .4s,padding .4s,box-shadow .4s;
+}
+header.is-stuck{background:rgba(233,233,227,.92);backdrop-filter:blur(10px);padding:.85rem 0;box-shadow:0 1px 0 var(--line)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.wordmark{font-family:var(--display);font-size:1.3rem;letter-spacing:.01em;line-height:1;color:var(--paper);transition:color .4s}
+.wordmark em{font-style:normal;display:block;font-family:var(--body);font-size:.5625rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;margin-top:.4rem;opacity:.7}
+header.is-stuck .wordmark{color:var(--ink)}
+nav{display:flex;align-items:center;gap:2rem}
+nav a{font-size:.8125rem;font-weight:500;letter-spacing:.02em;color:var(--paper);opacity:.8;transition:opacity .25s,color .4s}
+nav a:hover{opacity:1}
+header.is-stuck nav a{color:var(--ink)}
+nav a.cta{
+  border:1px solid rgba(245,245,241,.4);padding:.5rem 1.1rem;border-radius:100px;opacity:1;
+}
+header.is-stuck nav a.cta{border-color:var(--agua);color:var(--agua)}
+.menu-btn{display:none;background:none;border:0;color:var(--paper);font-family:var(--body);font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+header.is-stuck .menu-btn{color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100svh;display:flex;align-items:flex-end;padding:0 0 clamp(3rem,7vw,5.5rem);
+  position:relative;overflow:hidden;background:var(--ink);
+}
+.hero__bg{position:absolute;inset:0;z-index:0}
+.hero__bg video{width:100%;height:100%;object-fit:cover;opacity:.42}
+.hero__bg::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(120% 80% at 15% 100%, rgba(46,107,99,.45), transparent 60%),
+    linear-gradient(175deg,#0E1614 0%,#15201C 45%,#1D2B26 100%);
+}
+.hero__bg video{position:relative;z-index:2}
+.hero__scrim{
+  position:absolute;inset:0;z-index:3;
+  background:linear-gradient(to top,rgba(14,22,20,.94) 8%,rgba(14,22,20,.5) 55%,rgba(14,22,20,.75) 100%);
+}
+.hero .wrap{position:relative;z-index:4;width:100%}
+.hero__eyebrow{color:var(--paper);opacity:.65;margin-bottom:2rem}
+.hero__eyebrow::after{background:rgba(245,245,241,.3)}
+h1{
+  font-family:var(--display);font-weight:400;color:var(--paper);
+  font-size:clamp(2.5rem,6.6vw,5.5rem);line-height:1;letter-spacing:-.025em;
+  max-width:15ch;
+}
+h1 .agua{color:#7FB9AE;font-style:italic}
+.hero__sub{color:rgba(245,245,241,.72);max-width:44ch;margin-top:1.75rem;font-size:1.0625rem}
+.hero__meta{
+  display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:3rem;
+  padding-top:1.75rem;border-top:1px solid rgba(245,245,241,.18);
+}
+.hero__meta div{color:var(--paper)}
+.hero__meta dt{font-size:.625rem;text-transform:uppercase;letter-spacing:.2em;opacity:.55;margin-bottom:.4rem}
+.hero__meta dd{font-family:var(--display);font-size:1.5rem;line-height:1}
+
+/* ---------- firma ---------- */
+.firma{background:var(--paper)}
+.firma__grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2.5rem,7vw,6rem);align-items:start}
+.firma__body p+p{margin-top:1.25rem}
+.firma__body p{color:var(--ink-soft);max-width:56ch}
+.firma__body p:first-child{
+  font-family:var(--display);font-size:clamp(1.25rem,2.2vw,1.75rem);
+  line-height:1.35;color:var(--ink);
+}
+
+/* ---------- áreas ---------- */
+.areas__head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.area{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) 2rem;
+  gap:clamp(1rem,4vw,3rem);align-items:baseline;
+  padding:1.6rem 1rem 1.6rem 0;border-top:1px solid var(--line);
+  transition:padding-left .35s,background .35s;
+}
+.area:last-of-type{border-bottom:1px solid var(--line)}
+.area__name{font-family:var(--display);font-size:clamp(1.125rem,2.1vw,1.5rem);line-height:1.2;transition:color .3s}
+.area__desc{font-size:.9375rem;color:var(--ink-soft);line-height:1.55}
+.area__arrow{font-size:1rem;color:var(--agua);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s;justify-self:end}
+.area:hover{padding-left:1.25rem;background:rgba(46,107,99,.055)}
+.area:hover .area__name{color:var(--agua)}
+.area:hover .area__arrow{opacity:1;transform:translateX(0)}
+
+/* ---------- socios ---------- */
+.socios{background:var(--ink);color:var(--paper)}
+.socios .eyebrow{color:#7FB9AE}
+.socios .eyebrow::after{background:rgba(245,245,241,.2)}
+.socios h2.title{color:var(--paper)}
+.socios__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,2.5vw,2rem);margin-top:clamp(2.5rem,5vw,4rem)}
+.socio__portrait{
+  aspect-ratio:3/4;background:linear-gradient(160deg,#243330,#1A2521);
+  border:1px solid rgba(245,245,241,.12);position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center;
+}
+.socio__portrait span{
+  font-size:.625rem;text-transform:uppercase;letter-spacing:.16em;
+  color:rgba(245,245,241,.28);padding-bottom:1.25rem;
+}
+.socio__portrait::after{
+  content:"";position:absolute;inset:0;background:var(--agua);
+  opacity:0;transition:opacity .4s;mix-blend-mode:overlay;
+}
+.socio:hover .socio__portrait::after{opacity:.35}
+.socio h3{font-family:var(--display);font-weight:400;font-size:1.25rem;margin-top:1.25rem;line-height:1.2}
+.socio p{font-size:.8125rem;color:rgba(245,245,241,.55);margin-top:.4rem}
+.socio a{
+  display:inline-block;margin-top:.9rem;font-size:.6875rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.16em;color:#7FB9AE;
+  border-bottom:1px solid rgba(127,185,174,.35);padding-bottom:.2rem;transition:border-color .3s;
+}
+.socio a:hover{border-color:#7FB9AE}
+
+/* ---------- clientes ---------- */
+.clientes{background:var(--paper)}
+.filtros{display:flex;flex-wrap:wrap;gap:.5rem;margin:clamp(2rem,4vw,3rem) 0 0}
+.filtro{
+  font-family:var(--body);font-size:.75rem;font-weight:500;letter-spacing:.03em;
+  padding:.5rem 1rem;border:1px solid var(--line);border-radius:100px;
+  background:none;color:var(--ink-soft);cursor:pointer;transition:all .25s;
+}
+.filtro sup{font-size:.625rem;opacity:.55;margin-left:.3rem;top:0;position:relative}
+.filtro:hover{border-color:var(--agua);color:var(--agua)}
+.filtro.is-on{background:var(--agua);border-color:var(--agua);color:var(--paper)}
+.filtro.is-on sup{opacity:.75}
+.clientes__grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.5rem;
+}
+.cliente{
+  background:var(--paper);padding:1.5rem 1.35rem;min-height:118px;
+  display:flex;flex-direction:column;justify-content:flex-end;transition:background .3s;
+}
+.cliente:hover{background:rgba(46,107,99,.06)}
+.cliente h3{font-size:.875rem;font-weight:600;line-height:1.3;letter-spacing:.005em}
+.cliente p{font-size:.75rem;color:var(--seco);margin-top:.4rem;line-height:1.4}
+.cliente.is-hidden{display:none}
+.clientes__nota{margin-top:1.5rem;font-size:.75rem;color:var(--seco)}
+
+/* ---------- contacto ---------- */
+.contacto__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
+.dato{padding:1.5rem 0;border-top:1px solid var(--line)}
+.dato dt{font-size:.625rem;text-transform:uppercase;letter-spacing:.2em;color:var(--seco);margin-bottom:.6rem}
+.dato dd{font-family:var(--display);font-size:1.375rem;line-height:1.35}
+.dato dd a{transition:color .25s}
+.dato dd a:hover{color:var(--agua)}
+.dato dd small{display:block;font-family:var(--body);font-size:.75rem;color:var(--seco);margin-top:.25rem;letter-spacing:.02em}
+.wa{
+  display:inline-flex;align-items:center;gap:.6rem;margin-top:2rem;
+  background:var(--agua);color:var(--paper);padding:.9rem 1.6rem;border-radius:100px;
+  font-size:.8125rem;font-weight:600;letter-spacing:.02em;transition:background .3s;
+}
+.wa:hover{background:#245751}
+
+footer{background:var(--ink);color:rgba(245,245,241,.5);padding:3rem 0;font-size:.75rem}
+.footer__inner{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:center}
+.footer__inner .wordmark{color:rgba(245,245,241,.85)}
+
+/* ---------- reveal ---------- */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (min-width:1000px){body{padding-left:80px}}
+@media (max-width:999px){
+  .acequia{display:none}
+  .progress-top{display:block}
+  .firma__grid,.areas__head,.contacto__grid{grid-template-columns:1fr;gap:2rem}
+  .socios__grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+  .area{grid-template-columns:1fr;gap:.5rem}
+  .area__arrow{display:none}
+  nav{display:none}
+  .menu-btn{display:block}
+}
+@media (max-width:560px){
+  .socios__grid{grid-template-columns:1fr}
+  .hero__meta{gap:1.75rem}
+  .clientes__grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ---------- hero variante: lockup tipográfico ---------- */
+.hero--mark{align-items:center;text-align:center;padding:7rem 0 5rem}
+.hero--mark .wrap{display:flex;flex-direction:column;align-items:center}
+.lockup__mark{height:clamp(44px,6vw,72px);width:auto;opacity:.92;margin-bottom:clamp(2rem,4vw,3.25rem)}
+.hero--mark h1{
+  font-size:clamp(2.9rem,12vw,9.5rem);line-height:.92;letter-spacing:.005em;
+  max-width:none;text-transform:uppercase;
+}
+.lockup__rule{width:min(620px,86%);height:1px;background:rgba(245,245,241,.26);margin:clamp(1.1rem,2vw,1.75rem) 0 1.15rem}
+.lockup__sub{
+  font-family:var(--body);font-size:clamp(.625rem,1.5vw,.8125rem);font-weight:500;
+  text-transform:uppercase;letter-spacing:.44em;text-indent:.44em;
+  color:rgba(245,245,241,.72);
+}
+.lockup__tag{
+  margin-top:clamp(2.25rem,5vw,3.5rem);font-family:var(--display);font-style:italic;
+  font-size:clamp(1.0625rem,2.3vw,1.65rem);line-height:1.35;color:#7FB9AE;max-width:24ch;
+}
+.hero--mark .hero__meta{justify-content:center;margin-top:clamp(3rem,6vw,4.5rem)}
+.hero--mark .hero__meta div{text-align:center}
+.hero--mark .hero__eyebrow{justify-content:center;margin-bottom:0;margin-top:2.5rem;font-size:.625rem}
+.hero--mark .hero__eyebrow::after,.hero--mark .hero__eyebrow::before{content:"";flex:0;max-width:0}
+
+/* ---------- logo en imagen ---------- */
+.logo-img{height:34px;width:auto;transition:filter .4s,height .4s}
+/* El logo del navbar es claro y vive sobre el video oscuro.
+   Al fijarse el header sobre fondo piedra hay que oscurecerlo.
+   Lo correcto es tener dos archivos; este filtro sirve si el logo es monocromo. */
+header.is-stuck .logo-img{filter:invert(1) brightness(.12)}
+header.is-stuck .logo-img{height:30px}
+
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+
+/* Hero con el logo como protagonista.
+   Agregar la clase hero--logo si el PNG ya incluye la palabra "Abogados";
+   sacarla si el logo es solo el isotipo y querés el lockup tipográfico. */
+.hero--logo h1,
+.hero--logo .lockup__rule,
+.hero--logo .lockup__sub{display:none}
+.hero--logo .lockup__mark{
+  height:auto;width:min(560px,82vw);max-height:42vh;object-fit:contain;
+  margin-bottom:0;opacity:1;
+}
+.hero--logo .lockup__tag{margin-top:clamp(1.75rem,4vw,2.75rem)}
+
+/* ---------- retratos de socios ---------- */
+.socio__portrait span{position:relative;z-index:0}
+.socio__portrait img{
+  position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;
+  object-position:center 22%;
+  filter:grayscale(1) contrast(1.06) brightness(.92);
+  transition:filter .6s ease,transform .9s cubic-bezier(.2,.7,.2,1);
+}
+.socio:hover .socio__portrait img{filter:grayscale(.3) contrast(1.06) brightness(1);transform:scale(1.035)}
+.socio__portrait::after{z-index:2}
+
+/* El h2 de Contacto ya no lleva eyebrow arriba, así que respira solo */
+#contacto .title{max-width:none}
+
+/* ---------- botón flotante de WhatsApp ---------- */
+.wa-float{
+  position:fixed;z-index:70;
+  right:clamp(1rem,3vw,2.25rem);bottom:clamp(1rem,3vw,2.25rem);
+  width:56px;height:56px;border-radius:50%;
+  background:#25D366;display:grid;place-items:center;
+  box-shadow:0 6px 26px rgba(21,32,28,.3);
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s;
+}
+.wa-float svg{width:29px;height:29px;fill:#fff}
+.wa-float:hover{transform:scale(1.07);box-shadow:0 10px 32px rgba(21,32,28,.38)}
+.wa-float:active{transform:scale(.97)}
+@media (max-width:560px){.wa-float{width:52px;height:52px}.wa-float svg{width:27px;height:27px}}
+
+/* ---------- títulos de sección sin eyebrow ---------- */
+.firma__grid > .rv > .title,
+.socios .title{margin-bottom:0}
+.areas__head{align-items:baseline}
+
+/* ---------- formulario de contacto ---------- */
+.form{display:grid;gap:1.5rem}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.field label{
+  display:block;font-size:.625rem;font-weight:500;text-transform:uppercase;
+  letter-spacing:.2em;color:var(--seco);margin-bottom:.6rem;
+}
+.field input,.field select,.field textarea{
+  width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);
+  border-radius:0;padding:.65rem 0;color:var(--ink);
+  font-family:var(--body);font-size:1rem;line-height:1.5;
+  -webkit-appearance:none;appearance:none;transition:border-color .3s;
+}
+.field textarea{resize:vertical;min-height:112px}
+.field select{
+  cursor:pointer;padding-right:1.75rem;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A29D90' stroke-width='1.4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .1rem center;background-size:11px;
+}
+.field input:hover,.field select:hover,.field textarea:hover{border-bottom-color:var(--seco)}
+.field input:focus,.field select:focus,.field textarea:focus{border-bottom-color:var(--agua)}
+.field input.is-error,.field textarea.is-error{border-bottom-color:#A6402F}
+
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.form__foot{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:.5rem}
+.form__submit{
+  font-family:var(--body);font-size:.8125rem;font-weight:600;letter-spacing:.02em;
+  background:var(--ink);color:var(--paper);border:0;border-radius:100px;
+  padding:.95rem 2rem;cursor:pointer;transition:background .3s,transform .2s;
+}
+.form__submit:hover{background:var(--agua)}
+.form__submit:active{transform:scale(.98)}
+.form__submit[disabled]{opacity:.5;cursor:default}
+.form__msg{font-size:.8125rem;color:var(--agua);margin:0}
+.form__msg.is-error{color:#A6402F}
+.form__note{font-size:.6875rem;line-height:1.5;color:var(--seco);max-width:52ch;margin-top:.25rem}
+
+@media (max-width:640px){.field-row{grid-template-columns:1fr}}
+
+/* ---------- ajuste editorial ---------- */
+/* La regla del eyebrow sale del texto y sigue hasta el borde de la columna */
+.eyebrow{margin-bottom:1.5rem}
+.eyebrow::after{max-width:none}
+.areas__head .eyebrow::after,
+#clientes .eyebrow::after{max-width:180px}
+
+/* Cuerpo justificado con partición de palabras.
+   Solo en la columna ancha de La Firma: en medidas cortas el justificado abre ríos. */
+.firma__body p:not(:first-child){
+  text-align:justify;
+  hyphens:auto;-webkit-hyphens:auto;-ms-hyphens:auto;
+  hyphenate-limit-chars:6 3 3;
+}
+.firma__body p:first-child{text-wrap:balance}
+h1,h2.title,.lockup__tag{text-wrap:balance}
+.lead{text-wrap:pretty}
+
+/* Los títulos respiran un poco más, como en un membrete */
+h2.title{margin-bottom:0;letter-spacing:-.02em}
+.firma__grid > .rv > .title,
+.socios .title{margin-bottom:0}
+
+
+/* ---------- terminación ---------- */
+::selection{background:var(--agua);color:var(--paper)}
+
+.skip{
+  position:absolute;left:1rem;top:-100px;z-index:100;
+  background:var(--ink);color:var(--paper);padding:.75rem 1.25rem;border-radius:4px;
+  font-size:.8125rem;font-weight:600;transition:top .2s;
+}
+.skip:focus{top:1rem}
+
+/* enlace activo en el header */
+nav a.is-current{opacity:1}
+nav a.is-current:not(.cta){box-shadow:inset 0 -1px 0 currentColor}
+
+/* ---------- menú mobile ---------- */
+@media (max-width:999px){
+  .menu-btn{display:block;position:relative;z-index:58}
+  nav{
+    display:flex;position:fixed;inset:0;z-index:56;
+    flex-direction:column;justify-content:center;align-items:center;gap:1.75rem;
+    background:var(--ink);
+    opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s;
+  }
+  nav.is-open{opacity:1;visibility:visible}
+  nav a{
+    font-family:var(--display);font-size:clamp(1.5rem,7vw,2.25rem);
+    color:var(--paper);opacity:.85;letter-spacing:-.01em;
+  }
+  nav a.cta{
+    font-family:var(--body);font-size:.8125rem;margin-top:1rem;
+    border-color:rgba(245,245,241,.4);color:var(--paper);
+  }
+  header.is-stuck nav a{color:var(--paper)}
+  header.is-stuck nav a.cta{border-color:rgba(245,245,241,.4);color:var(--paper)}
+  body.nav-abierto{overflow:hidden}
+  body.nav-abierto .menu-btn,
+  body.nav-abierto header.is-stuck .menu-btn{color:var(--paper)}
+  body.nav-abierto .wa-float{opacity:0;pointer-events:none}
+}
+.wa-float{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,opacity .3s}
+
+/* ---------- logo en el pie ---------- */
+.logo-img--pie{height:32px;opacity:.9;transition:opacity .3s}
+footer .wordmark:hover .logo-img--pie{opacity:1}
+/* El pie es oscuro, así que el logo claro va tal cual: sin el invert del header */
+footer .logo-img{filter:none}
+@media (max-width:560px){
+  .footer__inner{flex-direction:column;align-items:flex-start;gap:1.5rem}
+  .logo-img--pie{height:28px}
+}
