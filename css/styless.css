@@ -9,6 +9,9 @@
   --display:"Bodoni Moda","Didot","Bodoni MT",Georgia,serif;
   --body:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --rail:34px;
+  --logo-h:50px;        /* logo del navbar arriba del video */
+  --logo-h-stuck:40px;  /* logo del navbar con el header fijo */
+  --logo-h-pie:196px;    /* logo del pie */
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -216,7 +219,7 @@ footer{background:var(--ink);color:rgba(245,245,241,.5);padding:3rem 0;font-size
 .js .rv.in{opacity:1;transform:none}
 
 /* ---------- responsive ---------- */
-@media (min-width:1000px){body{padding-left:80px}}
+@media (min-width:1000px){.wrap{padding-left:6.5rem}}
 @media (max-width:999px){
   .acequia{display:none}
   .progress-top{display:block}
@@ -262,12 +265,12 @@ footer{background:var(--ink);color:rgba(245,245,241,.5);padding:3rem 0;font-size
 .hero--mark .hero__eyebrow::after,.hero--mark .hero__eyebrow::before{content:"";flex:0;max-width:0}
 
 /* ---------- logo en imagen ---------- */
-.logo-img{height:34px;width:auto;transition:filter .4s,height .4s}
+.logo-img{height:var(--logo-h);width:auto;transition:filter .4s,height .4s}
 /* El logo del navbar es claro y vive sobre el video oscuro.
    Al fijarse el header sobre fondo piedra hay que oscurecerlo.
    Lo correcto es tener dos archivos; este filtro sirve si el logo es monocromo. */
 header.is-stuck .logo-img{filter:invert(1) brightness(.12)}
-header.is-stuck .logo-img{height:30px}
+header.is-stuck .logo-img{height:var(--logo-h-stuck)}
 
 .sr-only{
   position:absolute;width:1px;height:1px;padding:0;margin:-1px;
@@ -425,11 +428,30 @@ nav a.is-current:not(.cta){box-shadow:inset 0 -1px 0 currentColor}
 .wa-float{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,opacity .3s}
 
 /* ---------- logo en el pie ---------- */
-.logo-img--pie{height:32px;opacity:.9;transition:opacity .3s}
+.logo-img--pie{height:var(--logo-h-pie);opacity:.9;transition:opacity .3s}
 footer .wordmark:hover .logo-img--pie{opacity:1}
 /* El pie es oscuro, así que el logo claro va tal cual: sin el invert del header */
 footer .logo-img{filter:none}
 @media (max-width:560px){
   .footer__inner{flex-direction:column;align-items:flex-start;gap:1.5rem}
-  .logo-img--pie{height:28px}
+  .logo-img--pie{height:44px}
+}
+
+
+/* ---------- la línea se adapta al fondo que tiene detrás ---------- */
+.acequia{transition:background .45s ease}
+.acequia__fill,
+.acequia__node,
+.acequia__node span{transition:background .45s ease,border-color .45s ease,color .45s ease,transform .25s}
+
+.acequia.sobre-oscuro{background:rgba(245,245,241,.22)}
+.acequia.sobre-oscuro .acequia__fill{background:#7FB9AE}
+.acequia.sobre-oscuro .acequia__node{background:#15201C;border-color:rgba(245,245,241,.38)}
+.acequia.sobre-oscuro .acequia__node.is-active{background:#7FB9AE;border-color:#7FB9AE}
+.acequia.sobre-oscuro .acequia__node span{color:#7FB9AE}
+
+
+/* en pantallas chicas el logo del navbar no puede comerse la fila */
+@media (max-width:620px){
+  :root{--logo-h:40px;--logo-h-stuck:34px}
 }
